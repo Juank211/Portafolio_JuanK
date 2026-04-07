@@ -1,51 +1,141 @@
-body{
-    padding: 50px;
-    font-size: 20px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(223, 222, 251);
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1{
-    color: rgb(133, 132, 133);
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #0033a0;
+    color: rgb(209, 209, 209);
+    padding: 15px;
+    text-align: center;
+    border-bottom: 5px solid #ffd996;
+}
+
+.header-name {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.descripcion {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: rgb(209, 209, 209);
+}
+
+.nav a {
+    color: rgb(209, 209, 209);
+    text-decoration: wavy underline;
+    margin: 0 10px;
+}
+
+.bienvenida {
+    background-color: #0033a0;
+    color: rgb(209, 209, 209);
+    padding: 15px 5px;
     text-align: center;
 }
 
-h2{
-    text-align: center;
+.bienvenida-h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 }
 
-h3{
-    text-align: center;
-    background-color: gainsboro;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border-radius: 10px;
+.bienvenida p {
+    font-size: 16px;
+    margin: 5px 0;
 }
 
-h4{
+    
+.titulo-proyectos {
     text-align: center;
+    font-size: 32px;
+    color: rgb(209, 209, 209);
+    padding: 15px 0 15px;
+    background: linear-gradient(90deg, #001a4d, #0033a0, #0057d9, #0033a0, #001a4d);
 }
 
-table{
+.seccion-proyectos {
     width: 100%;
+    background: linear-gradient(90deg, #0057d9, #0033a0, #001a4d, #0033a0, #0057d9);
+    padding: 20px 20px 40px 20px;
+    overflow: hidden;
 }
 
-th {
-    width: 70%;
-    text-align: left;
-
+.contenedor-proyectos {
+    max-width: 1500px;
+    margin: 10px;
+    padding: 10px;
 }
 
-img{
-    width: 15%;
-    border-radius: 10%;
-
-}
-.contenedor{
+.tarjeta-proyectos {
+    float: left;
+    width: 30%;
+    margin: 1.5%;
+    background-color: #0057d9;
+    border-radius: 8px;
+    padding-bottom: 20px;
     text-align: center;
+    box-shadow: 8px 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-@media (max-width: 600px) {
-    body {
-        padding: 10px;
-    }
+.img-placeholder {
+    width: 100%;
+    height: 180px;
+    background-color: rgb(209, 209, 209);
+    border-radius: 8px 8px 0 0;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.tarjeta-proyectos h3 {
+    font-size: 20px;
+    color: rgb(209, 209, 209);
+    margin: 15px 0 5px;
+}
+
+.tarjeta-proyectos p {
+    font-size: 15px;
+    color: rgb(209, 209, 209);
+    margin: 0 15px 15px;
+}
+
+.botones a {
+    padding: 6px 12px;
+    margin: 0 5px;
+    background-color: #1e4c8c;
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.botones a:hover {
+    background-color: #0033a0;
+    color: rgb(209, 209, 209);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.footer {
+    background: linear-gradient(90deg, #0057d9, #0033a0, #001a4d, #0033a0, #0057d9);
+    color: rgb(209, 209, 209);
+    text-align: right;
+    padding: 15px;
+    border: 5px solid #ffd996;
 }

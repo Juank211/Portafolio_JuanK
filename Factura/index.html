@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replica Factura</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+<div class="contenedor-factura">
+    <!-- Encabezado Factura -->
+    <div class="encabezado">
+        <div class="info-empresa">
+            <div class="nombre-empresa">COMPANY</div>
+            <div class="eslogan-empresa">COMPANY TAGLINE HERE</div>
+        </div>
+        <div class="titulo">
+            <div class="titulo-empresa">INVOICE</div>
+            <div class="datos-factura">
+                <div class="detalles-factura">
+                    <p>Invoice Number:<br>
+                    Account No:<br>
+                    Invoice Date:</p>
+                </div>
+                <div class="valores-factura">
+                    <p>#123456<br>
+                    1234 5678 9101<br>
+                    April 05, 2020</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Detalles Cliente -->
+
+    <div class="detalles-cliente">
+        <div class="factura-para">
+            <h3>INVOICE TO</h3>
+            <h2 class="nombre-cliente"><strong>Jhone Doe</strong></h2>
+            <p class="detalles-cliente">Managing Director, Company ltd.<br>
+            Phone: +123 4567 8910<br>
+            Email: example@mail.com</p>
+        </div>
+        <div class="detalles-metodo-pago">
+            <div class="titulo-metodo">Payment Method</div>
+            <div class="metodo-contenido">
+                <div class="datos-metodo">Account No:<br>
+                Account Name:<br>
+                Branch Name:
+                </div>
+            
+                <div class="valores-metodo">1234 5678 910<br>
+                Jhone Doe<br>
+                XYZ
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Tabla de Articulos -->
+
+    <table class="elementos-tabla">
+        <thead>
+            <tr>
+                <th>DATE</th>
+                <th>ITEM DESCRIPTION</th>
+                <th>PRICE</th>
+                <th>QTY.</th>
+                <th>TOTAL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jan 10, 2020</td>
+                <td>Bussines Card Design</td>
+                <td>$300</td>
+                <td>2</td>
+                <td>$600,00</td>
+            </tr>
+            <tr>
+                <td>Jan 10, 2020</td>
+                <td>Fruit Fayer Design</td>
+                <td>$450</td>
+                <td>1</td>
+                <td>$450,00</td>
+            </tr>
+            <tr>
+                <td>Jan 10, 2020</td>
+                <td>Aplication Interface Design</td>
+                <td>$300</td>
+                <td>1</td>
+                <td>$300,00</td>
+            </tr>
+            <tr>
+                <td>Jan 9, 2020</td>
+                <td>Theme Development</td>
+                <td>$150</td>
+                <td>3</td>
+                <td>$450,00</td>
+            </tr>
+            <tr>
+                <td>Jan 9, 2020</td>
+                <td>Full Branding Design</td>
+                <td>$150</td>
+                <td>1</td>
+                <td>$150,00</td>
+            </tr>
+            <tr>
+                <td>Jan 8, 2020</td>
+                <td>Creative Logo Design</td>
+                <td>$200</td>
+                <td>1</td>
+                <td>$200,00</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- Subtotal -->
+
+    <div class="subtotal-factura">
+        <div class="datos-subtotal">
+            <p>Subtotal:<br>
+            Discount:<br>
+            Tax (10%)</p>
+        </div>
+        <div class="valores-subtotal">
+            <p>$3150,00<br>
+            0,00<br>
+            $315,00</p>
+        </div>
+    </div>
+
+    <!-- Total -->
+
+    <div class="total-factura">
+        <div class="dato-total">Total:</div>
+        <div class="valor-total">$3465,00</div>
+    </div>
+
+    <!-- Terminos, Condiciones  y Firma -->
+
+    <div class="terminos-firma">
+        <div class="terminos-condiciones"><strong>Terms & Conditions:</strong><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.Risus commodo viverra maecenas accumsan lacus vel facilisis.
+        </div>
+        <div class="firma">___________________________________<br>
+        <strong>Your Name & Signature</strong><br>
+        Account Manager</div>
+    </div>
+</div>
+</body>
+</html>

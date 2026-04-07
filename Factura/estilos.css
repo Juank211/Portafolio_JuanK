@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:0;
+}
+
+/* fondo */
+
+body{
+    background: rgb(227, 227, 227);
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 32px;
+    min-height: 100vh;
+}
+
+/* cuerpo factura */
+
+.contenedor-factura{
+    max-width: 1000px;
+    width: 100%;
+    background: white;
+    box-shadow: 0 20px 35px -12px rgb(0, 0, 0, 0.2);
+    padding: 32px;
+    border-bottom: 32px solid black;
+}
+
+/* encabezado factura */
+
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    border-bottom: 24px solid orange;
+    border-top: 24px solid whitesmoke;
+    margin-left: -32px;
+    margin-right: -32px;
+    margin-top: -32px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+.nombre-empresa{
+    font-size: 32px;
+    font-weight: 800;
+    color: white;
+    margin: 48px 48px 0;
+}
+
+.eslogan-empresa{
+    font-size: 14px;
+    color: white;
+    margin: 0 48px;
+}
+
+.titulo-empresa{
+    color: orange;
+    font-size: 50px;
+    font-weight: bold;
+    margin: 48px 64px 0;
+}
+
+.titulo p{
+    color: white;
+}
+
+.datos-factura{
+    display: flex;
+    justify-content: flex-start;
+    gap: 12px;
+    padding-top: 6px;
+    line-height: 24px;
+    margin-bottom: 48px;
+    padding-left: 20px;
+}
+
+.valores-factura{
+    text-align: right;
+}
+
+/* estilos detalle cliente */
+
+.detalles-cliente{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.factura-para{
+    padding: 16px 24px;
+    line-height: 24px;
+}
+
+
+.factura-para h3{
+    color: orange;
+    padding-bottom: 12px;
+}
+
+.detalles-metodo-pago{
+    padding: 16px 24px;
+}
+
+.titulo-metodo{
+    color: orange;
+    padding-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.metodo-contenido{
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    line-height: 24px;
+}
+
+/* estilos cuerpo tabla */
+
+.elementos-tabla{
+    width: 100%;
+    border-collapse: separate;
+    margin: 30px 0 24px 0;
+}
+
+.elementos-tabla th{
+    text-align: center;
+    font-weight: 600;
+    background-color: orange;
+    color: white;
+    padding: 12px;
+}
+
+.elementos-tabla th:nth-child(1),
+.elementos-tabla th:nth-child(2){
+    text-align: left;
+}
+
+.elementos-tabla td{
+    padding: 12px 8px;
+    text-align: center;
+}
+
+.elementos-tabla td:nth-child(1),
+.elementos-tabla td:nth-child(2){
+    text-align: left;
+}
+
+.elementos-tabla tr:nth-child(even){
+    background-color: #ececec
+}
+
+/* estilo seccion subtotal */
+
+.subtotal-factura{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 36px 12px 12px;
+    line-height: 24px;
+}
+
+.valores-subtotal{
+    text-align: right;
+}
+
+/* estilo seccion total */
+
+.total-factura{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 36px 12px 12px;
+    background-color: orange;
+    color: white;
+    font-weight: 600;
+}
+
+/* estilos seccion terminos y condiciones firma */
+
+.terminos-firma{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 24px;
+
+}
+
+.terminos-condiciones{
+    width: 60%;
+    line-height: 24px;
+    font-size: 13px;
+}
+
+.firma{
+    text-align: center;
+    padding-top: 64px;
+}
+
+
+
+
+
