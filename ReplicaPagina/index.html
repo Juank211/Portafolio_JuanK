@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Juan Camilo López | Senior Frontend Developer</title>
+    <title>Juan Camilo López | Junior Frontend Developer</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,50 +13,46 @@
     <div class="main-container">
 
         <header>
-            <div class="header-name">Juan Camilo López Rua</div>
-            <nav class="header-nav">
-                <a href="#sobre-mi">Inicio</a>
-                <a href="#perfil">Perfil</a>
-                <a href="#proyectos">Proyectos</a>
-            </nav>
+            <div class="contenedor">
+                <div class="header-name">Juan Camilo López Rua</div>
+                <nav class="header-nav">
+                    <a href="#sobre-mi">Inicio</a>
+                    <a href="#perfil">Perfil</a>
+                    <a href="#proyectos">Proyectos</a>
+                </nav>
+                <div class="limpiador"></div>
+            </div>
         </header>
 
         <main>
-            <!-- SECCIÓN SOBRE MÍ (Con botón Leer Más) -->
-            <section id="sobre-mi" class="hero-text">
-                <h1>Desarrollador Front-end Senior</h1>
-                <p class="subtitle">Especialista en Arquitectura de CSS y Rendimiento Web</p>
-
-                <div class="bio-container">
-                    <img src="ProfileImage.jpg.avif" alt="Perfil Principal" class="main-profile-img">
-
-                    <div class="bio-content-wrapper">
-                        <div id="bio-text" class="collapsible-text">
-                            <p>
-                                Soy Juan Camilo (o simplemente Juank), un apasionado de la tecnología y estudiante de Análisis y Desarrollo de Software en el SENA. Mi enfoque está en la arquitectura de CSS y el rendimiento web, buscando siempre que el código sea tan limpio y estético como la interfaz que ve el usuario.
-                                Mi formación militar me brindó disciplina; soy un fiel creyente de que el aprendizaje constante es la mejor herramienta de un programador. Mi base se encuentra en San Gil, Santander, desde donde aplico atención al detalle en cada línea de código.
-                            </p>
-                        </div>
-                        <button id="read-more-btn" class="read-more-btn">Leer más</button>
+            <section id="sobre-mi" class="section-hero">
+                <div class="contenedor">
+                    <div class="hero-izq">
+                        <img src="Profile_image.png" alt="Perfil Principal" class="img-encabezado">
                     </div>
-                </div>
-            </section>
-
-            <!-- SECCIÓN PERFIL (Imagen Circular) -->
-            <section id="perfil" class="profile-section">
-                <div class="profile-circle-container">
-                    <img src="profile.png" alt="Perfil Dibujado" class="main-profile-img">
-                    <div class="bio-container">
-                        <p>
-                            Mi viaje en el desarrollo de software comenzó con el deseo de construir soluciones digitales sólidas y escalables. Actualmente, me especializo en el ecosistema de JavaScript, Python y SQL. Me encanta enfrentar retos técnicos que requieran optimización pura y soy un apasionado de crear componentes que no dependan exclusivamente de librerías, sino de un profundo entendimiento del estándar web.
+                    <div class="hero-der">
+                        <h1>Desarrollador Front-end Junior</h1>
+                        <p>Soy Juan Camilo (o simplemente Juank), un apasionado de la tecnología y estudiante de Análisis y Desarrollo de Software en el SENA. Mi enfoque está en la arquitectura de CSS y el rendimiento web, buscando siempre que el código sea tan limpio y estético como la interfaz que ve el usuario.
+                        Mi formación militar me brindó disciplina; soy un fiel creyente de que el aprendizaje constante es la mejor herramienta de un programador. Mi base se encuentra en San Gil, Santander, desde donde aplico atención al detalle en cada línea de código.
                         </p>
-                        <br>
-                        "Juan Camilo Lopez Rua"
+                        <button class="leer-mas-btn">Leer más</button>
+                    </div>
+                    <div class="limpiador"></div>
+                </div>
+            </section>
+
+            <section id="perfil" class="seccion-perfil">
+                <div class="contenedor">
+                    <img src="Profile.png" alt="Avatar" class="perfil-avatar">
+                    <div class="perfil-info">
+                        <p>Mi viaje en el desarrollo de software comenzó con el deseo de construir soluciones digitales sólidas y escalables. Actualmente, me especializo en el ecosistema de JavaScript, Python y SQL. Me encanta enfrentar retos técnicos que requieran optimización pura y soy un apasionado de crear componentes que no dependan exclusivamente de librerías, sino de un profundo entendimiento del estándar web.
+                        </p>
+                        <span class="perfil-nombre">"Juan Camilo Lopez Rua"</span>
                     </div>
                 </div>
             </section>
 
-            <div class="divider"></div>
+            <div class="divisor"></div>
 
             <!-- SECCIÓN PROYECTOS (Grid Fluido y Centrado) -->
             <section id="proyectos" class="projects-grid">
@@ -110,7 +106,6 @@
 
                 </div>
             </section>
-
         </main>
 
         <footer>
@@ -120,7 +115,7 @@
     </div>
 
     <!-- SCRIPT PARA EL BOTÓN LEER MÁS -->
-    <script>
+    <!-- <script>
         const btn = document.getElementById('read-more-btn');
         const textArea = document.getElementById('bio-text');
 
@@ -130,7 +125,7 @@
                 btn.textContent = textArea.classList.contains('expanded') ? 'Leer menos' : 'Leer más';
             });
         }
-    </script>
+    </script> -->
 
 </body>
 
