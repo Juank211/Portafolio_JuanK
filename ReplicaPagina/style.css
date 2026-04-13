@@ -5,7 +5,7 @@
 }
 
 :root {
-    --primary: #ff6b00;
+    --primary: #fe5818;
     --dark: #232b32;
     --light: #f8fafd;
     --gray: #5f6e7c;
@@ -20,27 +20,26 @@ body {
     color: 3333;
     line-height: 1.5;
 }
-
-.clearfix{
-    clear: both;
-}
-
-.container{
+.contenedor{
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
+.clearfix{
+    clear: both;
+}
+
 /* --- header --- */
+
 header {
     background: var(--dark);
     color: var(--white);
-    padding: 25px 0px;
+    padding: 20px 0 40px 0;
 }
 
 .header-name {
     float: left;
-    font-weight: bold;
     font-size: 1.1rem;
 }
 
@@ -60,24 +59,26 @@ header {
 
 .section-hero{
     background-color: var(--white);
-    padding: 100px 0;
+    padding: 20px 0;
+    overflow: hidden;
+    width: 100%;
 }
 
 .hero-izq{
     float: left;
-    width: 40%;
-    text-align: center;;
+    width: 20%;
+    text-align: center;
 }
 
 .img-encabezado{
-    width: 100%;
-    max-width: 300px;
+    width: 150%;
+    padding-top: 100px;
+    /* max-width: 300px; */
 }
 
 .hero-der{
-    float: rigth;
-    width:55%;
-    padding-top: 30px;
+    float: right;
+    width:65%;
 }
 
 .hero-der h1{
@@ -103,10 +104,11 @@ header {
 }
 
 /* Seccion Perfil */
+
 .seccion-perfil{
     background: var(--primary);
     color: var(--white);
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -116,97 +118,97 @@ header {
 }
 
 .perfil-avatar{
-    width: 300px;
-    height: 200px;
-    border-radius: 50%;
-    margin-bottom: 25px;
+    width: 380px;
+    height: 250px;
+    border-radius: 70%;
 }
 
 .perfil-info p{
     font-size: 1.5rem;
-    font-style: italic;
     margin-bottom: 20px;
 }
 
 .perfil-nombre{
-    font-weight: bold;;
+    font-weight: bold;
+    font-style: italic;
 }
 
-.divisor{
-    height: 15px;
-    background-color: #e66000;;
+/* --- Tarjetas de Proyectos --- */
+
+.seccion-proyectos{
+    padding: 0 50px;
 }
 
-
-/* --- Grid de Proyectos (Centrado y Fluido) --- */
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 50px auto 0;
-    place-items: center; /* Centrado absoluto solicitado */
+h2{
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: var(--gray);
+    font-size: 2.8rem;
 }
 
-.project-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-    width: 100%;
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
+.tarjetas-proyectos{
+    float: left;
+    width: 23%;
+    margin: 1%;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    min-height: 500px;
 }
 
-.project-card:hover { transform: translateY(-10px); }
-
-.img-placeholder {
+.img-placeholder{
     height: 180px;
-    background: #f1f3f5;
+    background-color: #eee;
+    overflow: hidden;
 }
 
-.img-placeholder img {
+.img-placeholder img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
-.card-body {
+.cuerpo-tarjeta{
     padding: 25px;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+    text-align: center;
 }
 
-.card-body h3 { margin-bottom: 12px; font-size: 1.1rem; }
-
-.card-body p {
-    font-size: 0.9rem;
+.cuerpo-tarjeta h3{
+    margin-bottom: 15px;
     color: var(--gray);
-    margin-bottom: 20px;
-    flex-grow: 1;
 }
 
-.btn-small {
-    background: var(--primary);
+.cuerpo-tarjeta p{
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 25px;
+    text-align: center;
+    min-height: 80px;
+}
+
+.btn-small{
+    background-color: var(--primary);
     color: var(--white);
     text-decoration: none;
-    padding: 12px;
+    padding: 10px 0;
+    width: 100%;
+    float: left;
     text-align: center;
-    border-radius: 8px;
-    font-size: 0.85rem;
-    font-weight: 700;
+    font-weight: bold;
+    border-radius: 3px;
+    margin-bottom: 20px;
 }
 
-.divider { height: 10px; background: var(--primary); }
+/* Footer */
 
 footer {
-    padding: 40px 60px;
-    background: #1a1f24;
-    color: #5f6e7c;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 10px 0;
     text-align: right;
-    font-size: 0.8rem;
+    clear: both;
+}
+
+footer .contenedor{
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }

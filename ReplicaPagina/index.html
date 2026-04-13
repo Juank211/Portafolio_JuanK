@@ -14,7 +14,7 @@
 
         <header>
             <div class="contenedor">
-                <div class="header-name">Juan Camilo López Rua</div>
+                <div class="header-name"><strong>Juan Camilo</strong> López Rua</div>
                 <nav class="header-nav">
                     <a href="#sobre-mi">Inicio</a>
                     <a href="#perfil">Perfil</a>
@@ -33,7 +33,6 @@
                     <div class="hero-der">
                         <h1>Desarrollador Front-end Junior</h1>
                         <p>Soy Juan Camilo (o simplemente Juank), un apasionado de la tecnología y estudiante de Análisis y Desarrollo de Software en el SENA. Mi enfoque está en la arquitectura de CSS y el rendimiento web, buscando siempre que el código sea tan limpio y estético como la interfaz que ve el usuario.
-                        Mi formación militar me brindó disciplina; soy un fiel creyente de que el aprendizaje constante es la mejor herramienta de un programador. Mi base se encuentra en San Gil, Santander, desde donde aplico atención al detalle en cada línea de código.
                         </p>
                         <button class="leer-mas-btn">Leer más</button>
                     </div>
@@ -55,78 +54,69 @@
             <div class="divisor"></div>
 
             <!-- SECCIÓN PROYECTOS (Grid Fluido y Centrado) -->
-            <section id="proyectos" class="projects-grid">
+
+            <section id="proyectos" class="seccion-proyectos">
                 <h2>Proyectos Destacados</h2>
 
-                <div class="grid-container">
-
-                    <article class="project-card">
+                <div class="contenedor-proyectos">
+                    <div class="tarjetas-proyectos">
                         <div class="img-placeholder">
                             <img src="proyecto1.jpg.webp" alt="Proyecto 1">
                         </div>
-                        <div class="card-body">
-                            <h3>Replica de Portafolio Senior</h3>
-                            <p>Ejercicio de arquitectura CSS pura recreando una interfaz profesional con control total del flujo del documento.</p>
+                        <div class="cuerpo-tarjeta">
+                            <h3>Replica de Portafolio</h3>
+                            <p>Ejercicio de arquitectura CSS pura enfocado en recrear una interfaz profesional con control total del flujo del documento. Se implementaron principios avanzados de maquetación como Flexbox y Grid, asegurando una estructura limpia, escalable y mantenible. El proyecto destaca por su enfoque en la semántica HTML, la reutilización de estilos y la optimización del rendimiento sin depender de frameworks externos. Ideal para demostrar dominio técnico en la construcción de interfaces desde cero.</p>
                             <a href="#" class="btn-small">Ver proyecto</a>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="project-card">
+                    <div class="tarjetas-proyectos">
                         <div class="img-placeholder">
                             <img src="proyecto2.jpg.webp" alt="Proyecto 2">
                         </div>
-                        <div class="card-body">
-                            <h3>Gestor de Tareas Full-stack</h3>
-                            <p>Integración de JS con SQL para una aplicación dinámica de gestión de actividades con UI minimalista.</p>
+                        <div class="cuerpo-tarjeta">
+                            <h3>Gestor Full-stack</h3>
+                            <p>Aplicación completa desarrollada con integración de JavaScript y SQL para la gestión dinámica de tareas. Incluye funcionalidades como creación, edición, eliminación y seguimiento de actividades en tiempo real, con persistencia de datos en base de datos. Se diseñó una interfaz intuitiva centrada en la experiencia del usuario, aplicando buenas prácticas de diseño UI/UX. Además, se implementaron validaciones y lógica de negocio para garantizar consistencia y eficiencia en el manejo de la información.</p>
                             <a href="#" class="btn-small">Ver proyecto</a>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="project-card">
+                    <div class="tarjetas-proyectos">
                         <div class="img-placeholder">
                             <img src="proyecto3.jpg.webp" alt="Proyecto 3">
                         </div>
-                        <div class="card-body">
+                        <div class="cuerpo-tarjeta">
                             <h3>Visualización de Datos</h3>
-                            <p>Utilización de APIs externas para rastrear y visualizar desempeño deportivo en tiempo real.</p>
+                            <p>Proyecto orientado al consumo de APIs externas para la recolección y visualización de datos en tiempo real. Se desarrollaron gráficos interactivos que permiten interpretar información compleja de manera clara y efectiva. Se aplicaron técnicas de procesamiento de datos y manejo de asincronía en JavaScript, optimizando la carga y actualización de la información. Este proyecto demuestra la capacidad de transformar datos en insights visuales útiles para la toma de decisiones.</p>
                             <a href="#" class="btn-small">Ver proyecto</a>
                         </div>
-                    </article>
+                    </div>
 
-                    <article class="project-card">
+                    <div class="tarjetas-proyectos">
                         <div class="img-placeholder">
                             <img src="proyecto4.jpg.webp" alt="Proyecto 4">
                         </div>
-                        <div class="card-body">
+                        <div class="cuerpo-tarjeta">
                             <h3>Entorno AI Fieldwork</h3>
-                            <p>Optimización técnica de plataformas de Inteligencia Artificial para análisis de datos regionales.</p>
+                            <p>Optimización técnica de plataformas de Inteligencia Artificial aplicada al análisis de datos regionales. Se trabajó en la integración de herramientas que permiten procesar grandes volúmenes de información, mejorando la eficiencia y precisión en los resultados. El enfoque del proyecto está en la automatización de procesos, reducción de tiempos operativos y mejora continua del rendimiento del sistema. Ideal para entornos donde la toma de decisiones depende del análisis de datos complejos</p>
                             <a href="#" class="btn-small">Ver proyecto</a>
                         </div>
-                    </article>
+                    </div>
+
+                    <div class="limpiador"></div>
 
                 </div>
             </section>
         </main>
 
         <footer>
-            <p>&copy; 2026 Juan Camilo López Rua | Arquitectura de CSS Manual</p>
+            <div class="contenedor">
+                <p>&copy; 2026 Juan Camilo López Rua | Arquitectura de CSS Manual</p>
+            </div>
         </footer>
 
     </div>
 
-    <!-- SCRIPT PARA EL BOTÓN LEER MÁS -->
-    <!-- <script>
-        const btn = document.getElementById('read-more-btn');
-        const textArea = document.getElementById('bio-text');
-
-        if (btn && textArea) {
-            btn.addEventListener('click', () => {
-                textArea.classList.toggle('expanded');
-                btn.textContent = textArea.classList.contains('expanded') ? 'Leer menos' : 'Leer más';
-            });
-        }
-    </script> -->
-
 </body>
-
 </html>
+
