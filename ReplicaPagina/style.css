@@ -41,6 +41,7 @@ header {
 .header-name {
     float: left;
     font-size: 1.1rem;
+    padding-right: 100px;
 }
 
 .header-nav{
