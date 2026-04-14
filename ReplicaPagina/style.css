@@ -20,13 +20,14 @@ body {
     color: 3333;
     line-height: 1.5;
 }
+
 .contenedor{
     width: 90%;
     max-width: 1100px;
     margin: 0 auto;
 }
 
-.clearfix{
+.limpiador{
     clear: both;
 }
 
@@ -35,14 +36,19 @@ body {
 header {
     background: var(--dark);
     color: var(--white);
-    padding: 20px 0 40px 0;
+    padding: 20px 0 20px 0;
+}
+
+header .contenedor{
+    margin-left: 180px;
 }
 
 .header-name {
     float: left;
     font-size: 1.1rem;
-    padding-right: 100px;
+    text-align: left;
 }
+
 
 .header-nav{
     float: right;
@@ -114,7 +120,7 @@ header {
 }
 
 .contenedor{
-    width: 65%;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -211,5 +217,5 @@ footer {
 footer .contenedor{
     width: 90%;
     max-width: 1100px;
-    margin: 0 auto;
+    margin-left: 138px;
 }
