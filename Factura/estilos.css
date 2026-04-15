@@ -17,22 +17,30 @@ body{
 
 /* cuerpo factura */
 
-.contenedor-factura{
+.contenedor-factura {
     max-width: 1000px;
     width: 100%;
     background: white;
     box-shadow: 0 20px 35px -12px rgb(0, 0, 0, 0.2);
     padding: 32px;
-    border-bottom: 32px solid black;
+    border-bottom: 52px solid transparent; /* Espacio para la barra */
+    background-image: 
+        linear-gradient(white, white), /* Mantiene el fondo blanco del cuerpo */
+        linear-gradient(130deg, #E58940 15%, transparent 10%), /* Triángulo naranja */
+        linear-gradient(130deg, transparent 13%, #000 10%); /* Franja negra diagonal */
+    background-origin: border-box;
+    background-clip: padding-box, border-box, border-box;
+    background-size: 100% 100%, 65% 40px, 100% 52px;
+    background-position: 0 0, 0 bottom, 0 bottom;
+    background-repeat: no-repeat;
 }
-
 /* encabezado factura */
 
 .encabezado{
     display: flex;
     justify-content: space-between;
     background: black;
-    border-bottom: 24px solid orange;
+    border-bottom: 24px solid #E58940;
     border-top: 24px solid whitesmoke;
     margin-left: -32px;
     margin-right: -32px;
@@ -55,7 +63,7 @@ body{
 }
 
 .titulo-empresa{
-    color: orange;
+    color: #E58940;
     font-size: 50px;
     font-weight: bold;
     margin: 48px 64px 0;
@@ -94,7 +102,7 @@ body{
 
 
 .factura-para h3{
-    color: orange;
+    color: #E58940;
     padding-bottom: 12px;
 }
 
@@ -103,7 +111,7 @@ body{
 }
 
 .titulo-metodo{
-    color: orange;
+    color: #E58940;
     padding-bottom: 12px;
     font-weight: 700;
     font-size: 20px;
@@ -127,7 +135,7 @@ body{
 .elementos-tabla th{
     text-align: center;
     font-weight: 600;
-    background-color: orange;
+    background-color: #E58940;
     color: white;
     padding: 12px;
 }
@@ -170,7 +178,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding: 12px 36px 12px 12px;
-    background-color: orange;
+    background-color: #E58940;
     color: white;
     font-weight: 600;
 }
@@ -181,6 +189,7 @@ body{
     display: flex;
     justify-content: space-between;
     padding-top: 24px;
+    padding-bottom: 50px;
 
 }
 
