@@ -6,7 +6,7 @@
 
 /* fondo */
 
-body{
+/* body{
     background: rgb(227, 227, 227);
     font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
     display: flex;
@@ -14,7 +14,7 @@ body{
     padding: 32px;
     min-height: 100vh;
 }
-
+ */
 /* cuerpo factura */
 
 .contenedor-factura {
@@ -190,7 +190,6 @@ body{
     justify-content: space-between;
     padding-top: 24px;
     padding-bottom: 50px;
-
 }
 
 .terminos-condiciones{
@@ -203,8 +202,4 @@ body{
     text-align: center;
     padding-top: 64px;
 }
-
-
-
-
 
