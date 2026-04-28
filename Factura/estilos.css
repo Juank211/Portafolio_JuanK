@@ -217,7 +217,6 @@ body{
     .encabezado, 
     .detalles-cliente, 
     .metodo-contenido, 
-    .subtotal-factura,
     .terminos-firma {
         flex-direction: column;
         align-items: flex-start;
@@ -233,13 +232,12 @@ body{
         margin: 0;
     }
 
-    .valores-factura, .valores-subtotal, .valores-metodo {
+    .valores-factura, .valores-metodo {
         text-align: left;
     }
 
     .elementos-tabla {
         display: block;
         overflow-x: auto; 
-        -webkit-overflow-scrolling: touch;
     }
 }
