@@ -10,8 +10,6 @@
     --light: #f8fafd;
     --gray: #5f6e7c;
     --white: #ffffff;
-    --radius: 12px;
-    --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -19,6 +17,10 @@ body {
     background-color: #f4f7f6;
     color: #333;
     line-height: 1.5;
+}
+
+.limpiador{
+    clear: both;
 }
 
 .contenedor{
@@ -34,6 +36,7 @@ header {
     background: var(--dark);
     color: var(--white);
     padding: 20px 0;
+    overflow: hidden;
 }
 
 .header-name {
@@ -52,11 +55,6 @@ header {
     float: left; 
 }
 
-.contenedor-header {
-    margin-bottom: 20px;
-    padding: 0 60px;
-}
-
 /* Seccion sobre mi */
 
 .section-hero{
@@ -66,22 +64,15 @@ header {
 }
 
 
-.section-hero .contenedor{
-    display: flex;
-    align-items: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
 .hero-izq{
     float: left;
     width: 45%;
+    text-align: center;
 }
 
 .img-encabezado{
     width: 100%;
     max-width: 350px;
-    padding-top: 0;
 }
 
 .hero-der{    
@@ -91,14 +82,8 @@ header {
 
 .hero-der h1{
     color: var(--primary);
-    font-size: 3.5rem;
+    font-size: 3rem;
     margin-bottom: 15px;
-}
-
-.hero-der p{
-    color: var(--gray);
-    font-size: 1.1rem;
-    margin-bottom: 30px;
 }
 
 .leer-mas-btn{
@@ -119,12 +104,13 @@ header {
     color: var(--white);
     padding: 10px 0;
     text-align: center;
+    clear: both;
 }
 
 .perfil-avatar{
     width: 380px;
     height: 250px;
-    border-radius: 70%;
+    border-radius: 50%;
 }
 
 .perfil-info p{
@@ -141,6 +127,7 @@ header {
 
 .seccion-proyectos{
     padding: 0 50px;
+    background-color: #f4f7f6;
 }
 
 h2{
@@ -163,10 +150,6 @@ h2{
     min-height: 550px;
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
 
 .img-placeholder{
     height: 180px;
@@ -183,9 +166,6 @@ img{
 .cuerpo-tarjeta{
     padding: 25px;
     text-align: center;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
     height: 550px;
 }
 
@@ -209,11 +189,12 @@ img{
     color: var(--white);
     text-decoration: none;
     padding: 10px 0;
+    float: left;
     width: 100%;
     text-align: center;
     font-weight: bold;
     border-radius: 3px;
-    margin-top: auto;
+    margin-top: 15px;
     flex-shrink: 0;
 }
 
@@ -238,68 +219,58 @@ footer .contenedor{
 
 
 @media screen and (max-width: 990px) {
-    .hero-izq, 
-    .hero-der {
-        float: none;       
-        width: 100%;       
-        display: block;    
+    .hero-izq, .hero-der {
+        float: left;
+        width: 100%;
+        display: block;
         text-align: center;
     }
-
-    .img-encabezado {
-        padding-top: 20px;
-        width: 50%;        
-    }
-
     .tarjetas-proyectos {
-        width: 46%;        
-        margin: 2%;        
+        width: 46%;
+        margin: 1%;
+        min-height: 550px;
+        height: auto;
+    }
+    .leer-mas-btn {
+        float: none;
+        display: inline-block;
+        margin-top: 20px;
+    }
+    .btn-small {
+        float: none;
+        display: inline-block;
+        width: auto;
+        flex-shrink: 0;
+    }
+    .cuerpo-tarjeta {
+        height: auto;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .header-name, 
-    .header-nav {
-        float: none;      
-        width: 100%;
-        text-align: center;
+    .header-name, .header-nav {
+        float: none;
         display: block;
+        text-align: center;
     }
-
     .header-nav a {
         float: none;
-        display: inline-block; 
+        display: inline-block;
         margin: 10px;
     }
-
-    h2 {
-        font-size: 2.2rem;
-    }
-
-    .perfil-avatar {
-        width: 250px;
-        height: auto;     
+    .btn-small {
+        width: 100%;
     }
 }
 
 @media screen and (max-width: 550px) {
     .tarjetas-proyectos {
-        float: none;       
-        width: 100%;      
-        margin: 15px 0;   
+        float: none;
+        width: 100%;
+        margin: 10px 0;
         display: block;
-        min-height: auto; 
     }
-
-    .hero-der h1 {
-        font-size: 1.8rem; 
-    }
-
-    .contenedor {
-        width: 92%;      
-    }
-
-    footer {
-        text-align: center;
+    .btn-small {
+        width: 100%;
     }
 }
