@@ -179,8 +179,8 @@ h2{
     color: #666;
     margin-bottom: 25px;
     text-align: center;
-    max-height: 460px;
-    min-height: 410px;
+    max-height: 500px;
+    min-height: 460px;
     overflow: auto;
 }
 
@@ -226,6 +226,9 @@ footer .contenedor{
         height: auto;
         float: none;
         display: inline-block;
+    }
+    .cuerpo-tarjeta p{
+        min-height: 370px;
     }
 }
 
