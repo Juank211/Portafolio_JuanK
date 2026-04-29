@@ -63,7 +63,6 @@ header {
     width: 100%;
 }
 
-
 .hero-izq{
     float: left;
     width: 45%;
@@ -138,7 +137,7 @@ h2{
 }
 
 .contenedor-proyectos{
-    width: 100%;;
+    width: 100%;
 }
 
 .tarjetas-proyectos{
@@ -149,7 +148,6 @@ h2{
     border: 1px solid #ddd;
     min-height: 550px;
 }
-
 
 .img-placeholder{
     height: 180px;
@@ -173,6 +171,7 @@ h2{
     margin-bottom: 15px;
     color: var(--gray);
     flex-shrink: 0;
+    height: 40px;
 }
 
 .cuerpo-tarjeta p{
@@ -180,7 +179,8 @@ h2{
     color: #666;
     margin-bottom: 25px;
     text-align: center;
-    min-height: 120px;
+    max-height: 460px;
+    min-height: 410px;
     overflow: auto;
 }
 
@@ -194,7 +194,7 @@ h2{
     text-align: center;
     font-weight: bold;
     border-radius: 3px;
-    margin-top: 15px;
+    margin-bottom: 15px;
     flex-shrink: 0;
 }
 
@@ -218,7 +218,19 @@ footer .contenedor{
 /* aplicacion de media queries para aplicar diseño responsivo */
 
 
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 1400px){
+    .tarjetas-proyectos{
+        width: 45%;
+        margin: 1%;
+        min-height: 550px;
+        height: auto;
+        float: none;
+        display: inline-block;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
     .hero-izq, .hero-der {
         float: left;
         width: 100%;
@@ -226,7 +238,7 @@ footer .contenedor{
         text-align: center;
     }
     .tarjetas-proyectos {
-        width: 46%;
+        width: 45%;
         margin: 1%;
         min-height: 550px;
         height: auto;
@@ -239,11 +251,17 @@ footer .contenedor{
     .btn-small {
         float: none;
         display: inline-block;
-        width: auto;
+        width: 100%;
         flex-shrink: 0;
     }
     .cuerpo-tarjeta {
         height: auto;
+    }
+    .cuerpo-tarjeta p{  
+        max-height: 400px;
+    }
+    .footer{
+        text-align: center;
     }
 }
 
@@ -257,6 +275,18 @@ footer .contenedor{
         float: none;
         display: inline-block;
         margin: 10px;
+    }
+    .tarjetas-proyectos {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+        display: block;
+    }
+    .cuerpo-tarjeta h3{
+        font-size: 1.5rem;
+    }
+    .cuerpo-tarjeta p{
+        font-size: 1.3rem;
     }
     .btn-small {
         width: 100%;

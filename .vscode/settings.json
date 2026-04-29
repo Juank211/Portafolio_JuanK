@@ -12,5 +12,6 @@
       "type": "articuno",
       "name": "Frost"
     }
-  ]
+  ],
+  "liveServer.settings.port": 5501
 }
