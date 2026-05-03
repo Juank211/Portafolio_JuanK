@@ -242,40 +242,378 @@ body{
 }
 
 /* --- RESPONSIVIDAD --- */
-@media (max-width: 650px) {
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    
+    body {
+        padding: 20px;
+    }
+    
+    .contenedor-factura {
+        max-width: 100%;
+        padding: 25px;
+    }
+    
+    .encabezado {
+        margin-left: -25px;
+        margin-right: -25px;
+        margin-top: -25px;
+    }
+    
+    .izquierda {
+        padding-left: 25px;
+        margin-right: 15px;
+    }
+    
+    .derecha {
+        padding-right: 25px;
+        margin-left: 15px;
+    }
+    
+    .derecha h2 {
+        padding-left: 50px;
+        font-size: 32px;
+    }
+    
+    .derecha p {
+        padding-left: 50px;
+    }
+    
+    .elementos-tabla {
+        overflow-x: auto;
+    }
+    
+    .elementos-tabla table {
+        min-width: 700px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    
+    body {
+        padding: 15px;
+    }
+    
+    .contenedor-factura {
+        padding: 20px;
+        border-bottom: 35px solid transparent;
+        background-size: 100% 100%, 85% 40px, 100% 35px;
+    }
+    
+    .encabezado {
+        flex-direction: column;
+        height: auto;
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: -20px;
+    }
+    
+    /* Ocultar franjas */
+
+    .franja {
+        display: none;
+    }
+    
+    .izquierda {
+        margin-right: 0;
+        padding: 25px 20px;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 5px solid white;
+    }
+    
+    .logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+    
+    .logo img {
+        max-width: 70px;
+    }
+    
+    .logo h3 {
+        font-size: 22px;
+    }
+    
+    .derecha {
+        margin-left: 0;
+        padding: 25px 20px;
+        border-top: 5px solid #E58940;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .derecha h2 {
+        padding-left: 0;
+        text-align: center;
+        font-size: 32px;
+    }
+    
+    .derecha p {
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    /* Detalles cliente */
+    .detalles-cliente {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .factura-para,
+    .detalles-metodo-pago {
+        width: 100%;
+        padding: 12px 0;
+    }
+
+    .factura-para, 
+    .titulo-metodo{
+        text-align: center;
+    }
+    
+    .metodo-contenido{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        line-height: 24px;
+    }
+    
+    /* Tabla con scroll */
+    .elementos-tabla {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    .elementos-tabla table {
+        min-width: 650px;
+    }
+    
+    /* Subtotal y total */
+    .subtotal-factura,
+    .total-factura {
+        flex-wrap: nowrap;
+        min-width: 100%;
+    }
+    
+    .subtotal-factura {
+        padding: 0 12px 12px 12px;
+    }
+    
+    .total-factura {
+        padding: 12px;
+    }
+    
+    /* Términos y firma */
+    .terminos-firma {
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 0;
+    }
+    
+    .terminos-condiciones {
+        width: 100%;
+        order: 1;
+        text-align: left;
+    }
+    
+    .firma {
+        width: 100%;
+        order: 2;
+        text-align: right;
+        padding-top: 0;
+    }
+}
+
+@media (max-width: 480px) {
     
     body {
         padding: 10px;
     }
-
+    
     .contenedor-factura {
         padding: 15px;
+        border-bottom: 25px solid transparent;
+        background-size: 100% 100%, 100% 50px, 100% 25px;
     }
-
-    .encabezado, 
-    .detalles-cliente, 
-    .metodo-contenido, 
-    .terminos-firma {
+    
+    .encabezado {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 15px;
+        height: auto;
+        margin-left: -15px;
+        margin-right: -15px;
+        margin-top: -15px;
     }
-
-    .info-empresa, 
-    .titulo, 
-    .factura-para, 
-    .detalles-metodo-pago, 
-    .terminos-condiciones {
+    
+    /* Ocultar franjas */
+    .franja {
+        display: none;
+    }
+    
+    .izquierda {
+        margin-right: 0;
+        padding: 20px 15px;
+        justify-content: center;
+        text-align: center;
+        border-bottom: 5px solid white;
+    }
+    
+    .izquierda p {
+        font-size: 9px;
+    }
+    
+    .logo {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    
+    .logo img {
+        max-width: 55px;
+    }
+    
+    .logo h3 {
+        font-size: 18px;
+    }
+    
+    .derecha {
+        margin-left: 0;
+        padding: 20px 15px;
+        border-top: 5px solid #E58940;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .derecha h2 {
+        padding-left: 0;
+        text-align: center;
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    
+    .derecha p {
+        padding-left: 0;
+        text-align: center;
+        font-size: 11px;
+        line-height: 18px;
+    }
+    
+    /* Detalles cliente */
+    .detalles-cliente {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .factura-para,
+    .detalles-metodo-pago {
         width: 100%;
-        margin: 0;
+        padding: 10px 0;
     }
-
-    .valores-factura, .valores-metodo {
-        text-align: left;
+    
+    .factura-para, 
+    .titulo-metodo{
+        text-align: center;
     }
-
+    
+    .factura-para h3,
+    .titulo-metodo {
+        font-size: 18px;
+        padding-bottom: 8px;
+    }
+    
+    .metodo-contenido {
+        flex-direction: column;
+        gap: 10px;
+        line-height: 20px;
+    }
+    
+    /* Tabla con scroll */
     .elementos-tabla {
         display: block;
-        overflow-x: auto; 
+        overflow-x: auto;
+        white-space: nowrap;
+        margin: 20px 0;
+    }
+    
+    .elementos-tabla table {
+        min-width: 550px;
+    }
+    
+    .elementos-tabla th,
+    .elementos-tabla td {
+        padding: 8px 6px;
+        font-size: 12px;
+    }
+    
+    /* Subtotal y total  */
+    .subtotal-factura,
+    .total-factura {
+        flex-wrap: nowrap;
+        min-width: 100%;
+        font-size: 13px;
+    }
+    
+    .subtotal-factura {
+        padding: 0 10px 10px 10px;
+        line-height: 20px;
+    }
+    
+    .total-factura {
+        padding: 10px;
+    }
+    
+    /* Términos y firma */
+    .terminos-firma {
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 20px;
+        padding-bottom: 0;
+    }
+    
+    .terminos-condiciones {
+        width: 100%;
+        order: 1;
+        text-align: left;
+        font-size: 11px;
+        line-height: 20px;
+    }
+    
+    .firma {
+        width: 100%;
+        order: 2;
+        text-align: right;
+        padding-top: 0;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 320px) {
+    
+    .contenedor-factura {
+        padding: 10px;
+    }
+
+    .izquierda,
+    .derecha {
+        padding: 15px 10px;
+    }
+
+    .logo h3 {
+        font-size: 16px;
+    }
+
+    .derecha h2 {
+        font-size: 24px;
+    }
+
+    .elementos-tabla table {
+        min-width: 480px;
+    }
+
+    .subtotal-factura,
+    .total-factura {
+        font-size: 12px;
+        padding: 8px 12px;
     }
 }
