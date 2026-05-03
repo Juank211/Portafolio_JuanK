@@ -38,53 +38,91 @@ body{
 
 .encabezado{
     display: flex;
-    justify-content: space-between;
-    background: black;
-    border-bottom: 24px solid #E58940;
-    border-top: 24px solid whitesmoke;
+    height: 200px;
+    overflow: hidden;
+    background: #0d0d0d;
+    justify-content: center;
     margin-left: -32px;
     margin-right: -32px;
     margin-top: -32px;
-    padding-left: 32px;
-    padding-right: 32px;
 }
 
-.nombre-empresa{
-    font-size: 32px;
-    font-weight: 800;
+.izquierda, .derecha{
+    flex: 1;
+    background: #0d0d0d;
     color: white;
-    margin: 48px 48px 0;
-}
-
-.eslogan-empresa{
-    font-size: 14px;
-    color: white;
-    margin: 0 48px;
-}
-
-.titulo-empresa{
-    color: #E58940;
-    font-size: 50px;
-    font-weight: bold;
-    margin: 48px 64px 0;
-}
-
-.titulo p{
-    color: white;
-}
-
-.datos-factura{
     display: flex;
-    justify-content: flex-start;
-    gap: 12px;
-    padding-top: 6px;
-    line-height: 24px;
-    margin-bottom: 48px;
-    padding-left: 20px;
+    padding: 20px;
 }
 
-.valores-factura{
-    text-align: right;
+.izquierda{
+    align-items: center;
+    border-bottom: 22px solid white;
+    color: white;
+    padding-left: 52px;
+    margin-right: 23px;
+}
+
+.izquierda p{
+    font-size: 8px;
+}
+
+.logo h3{
+    font-size: 24px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo img {
+    max-width: 15%;
+    height: auto;
+}
+
+/* FRANJAS INTERMEDIAS */
+
+.franja {
+    width: 40px;
+    transform: skewX(-20deg);
+}
+
+.blanca{
+    background: white;
+    clip-path: polygon(0% 92%, 0% 0%, 100% 0%, 100% 15%, 75% 15%, 70% 100%, 0% 100%, 0% 92%);
+}
+
+.naranja{
+    background: #E58940;
+    clip-path: polygon(100% 0%, 100% 15%, 70% 15%, 70% 100%, 0% 100%, 0% 0%);
+}
+
+.derecha{
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 30px solid #E58940;
+    color: white;
+    margin-left: 19px;
+    padding-right: 52px;
+}
+
+.derecha h2{
+    color: #E58940;
+    margin-bottom: 10px;
+    width: 100%;
+    text-align: left;
+    font-size: 40px;
+    padding-top: 12px;
+    padding-left: 100px;
+}
+
+.derecha p{
+    line-height: 20px;
+    font-size: 12px;
+    padding-left: 100px;
 }
 
 /* estilos detalle cliente */
