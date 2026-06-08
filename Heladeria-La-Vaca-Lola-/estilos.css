@@ -2,7 +2,6 @@
     1. VARIABLES GLOBALES DE DISEÑO (ESTRICTO EN ESPAÑOL)
    ========================================================================== */
 :root {
-  /* Paleta de Colores de "La Vaca Lola" */
     --rosa-lola: #FF2D7A;
     --naranja-mango: #FF9500;
     --verde-tropical: #12e6df;
@@ -40,7 +39,6 @@ body {
     line-height: 1.6;
 }
 
-/* Títulos con actitud */
 h1, h2, h3 {
     font-family: var(--fuente-titulos);
     font-weight: 800;
@@ -69,7 +67,7 @@ a {
 }
 
 .contenedor-logo .imagen-logo {
-    height: 100px; /* Ajusta según el tamaño de tu archivo PHOTO-2026-05-26-07-28-34.jpg */
+    height: 100px; 
     display: block;
 }
 
@@ -86,12 +84,10 @@ a {
     transition: color 0.2s ease;
 }
 
-/* Pseudo-clase de interacción :hover */
 .lista-enlaces a:hover {
     color: var(--rosa-lola);
 }
 
-/* Botones con estilo Neobrutalista */
 .boton-pedir, .boton-principal, .boton-secundario, .boton-destacado, .boton-formulario {
     display: inline-block;
     font-family: var(--fuente-titulos);
@@ -171,7 +167,6 @@ a {
   position: relative;
 }
 
-/* Fondo decorativo asimétrico detrás del helado */
 .hero-imagen-contenedor::before {
   content: '';
   position: absolute;
@@ -192,7 +187,7 @@ a {
 }
 
 /* ==========================================================================
-   5. SECCIÓN DE PRENSA (MARQUESINA ANIME / TEXTO DE CORRIDO)
+  5. SECCIÓN DE PRENSA (MARQUESINA ANIME / TEXTO DE CORRIDO)
    ========================================================================== */
 .seccion-prensa {
   background-color: var(--negro-profundo);
@@ -216,7 +211,7 @@ a {
 }
 
 /* ==========================================================================
-   6. CATALOGO / "SABORES DEL PARCHE" (OBLIGACIÓN: CSS GRID)
+  6. CATALOGO / "SABORES DEL PARCHE" (OBLIGACIÓN: CSS GRID)
    ========================================================================== */
 .seccion-catalogo {
   padding: 80px 40px;
@@ -239,14 +234,12 @@ a {
   font-weight: 500;
 }
 
-/* Configuración obligatoria de Grid de 3 columnas para PC */
 .grid-sabores {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px; /* Manejo limpio de espacios sin usar tablas ni br */
+  gap: 40px; 
 }
 
-/* Tarjeta individual de Helado */
 .tarjeta-helado {
   background-color: var(--blanco-puro);
   border: var(--borde-grueso);
@@ -256,13 +249,11 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Microinteracción en las tarjetas de sabores */
 .tarjeta-helado:hover {
   transform: translate(-4px, -4px);
   box-shadow: 10px 10px 0px var(--negro-profundo);
 }
 
-/* Forzar que las tarjetas impares cambien sutilmente de fondo para dar ritmo dinámico */
 .tarjeta-helado:nth-child(even) {
   background-color: #FFFBF0;
 }
@@ -318,7 +309,6 @@ a {
   border-radius: 4px;
 }
 
-/* Botón "+" de la tarjeta */
 .boton-agregar {
   width: 45px;
   height: 45px;
@@ -343,7 +333,7 @@ a {
 }
 
 /* ==========================================================================
-   7. SABOR DEL MES (OBLIGACIÓN: FLEXBOX)
+  7. SABOR DEL MES (OBLIGACIÓN: FLEXBOX)
    ========================================================================== */
 .seccion-destacado {
   background-color: var(--blanco-puro);
@@ -408,7 +398,7 @@ a {
 }
 
 /* ==========================================================================
-   8. NUESTRA HISTORIA (OBLIGACIÓN: FLEXBOX)
+  8. NUESTRA HISTORIA (OBLIGACIÓN: FLEXBOX)
    ========================================================================== */
 .seccion-historia {
   display: flex;
@@ -454,7 +444,7 @@ a {
 }
 
 /* ==========================================================================
-   9. LOCALES Y EVENTOS (OBLIGACIÓN: FLEXBOX EN DISTRIBUCIÓN COLUMNAS)
+  9. LOCALES Y EVENTOS (OBLIGACIÓN: FLEXBOX EN DISTRIBUCIÓN COLUMNAS)
    ========================================================================== */
 .bloque-mixto {
   display: flex;
@@ -517,7 +507,7 @@ a {
 }
 
 /* ==========================================================================
-   10. FORMULARIO DE CONTACTO
+  10. FORMULARIO DE CONTACTO
    ========================================================================== */
 .seccion-contacto {
   padding: 80px 40px;
@@ -555,7 +545,6 @@ a {
   outline: none;
 }
 
-/* Pseudo-clase de interacción :focus para inputs */
 .grupo-formulario input:focus, .grupo-formulario select:focus, .grupo-formulario textarea:focus {
   background-color: #FFFEEF;
   border-color: var(--rosa-lola);
@@ -566,7 +555,7 @@ a {
 }
 
 /* ==========================================================================
-   11. FOOTER / PIE DE PÁGINA (OBLIGACIÓN: FLEXBOX)
+  11. FOOTER / PIE DE PÁGINA (OBLIGACIÓN: FLEXBOX)
    ========================================================================== */
 .pie-pagina {
   background-color: var(--blanco-puro);
@@ -618,7 +607,7 @@ a {
 }
 
 /* ==========================================================================
-   12. SECCIÓN DE VIDEOS (OBLIGACIÓN: CSS GRID)
+  12. SECCIÓN DE VIDEOS (OBLIGACIÓN: CSS GRID)
    ========================================================================== */
 .seccion-videos {
   padding: 80px 40px;
@@ -690,10 +679,9 @@ a {
 }
 
 /* ==========================================================================
-   13. ARQUITECTURA DE RESPONSIVIDAD UNIFICADA (MEDIA QUERIES AL FINAL)
+  13. ARQUITECTURA DE RESPONSIVIDAD UNIFICADA (MEDIA QUERIES AL FINAL)
    ========================================================================== */
 
-/* DISPOSITIVOS MEDIANOS (Tabletas y Laptops pequeñas - Máximo 968px) */
 @media (max-width: 968px) {
   .seccion-hero, 
   .seccion-historia, 
@@ -737,7 +725,6 @@ a {
   }
 }
 
-/* DISPOSITIVOS PEQUEÑOS (Celulares - Máximo 600px) */
 @media (max-width: 600px) {
   .seccion-hero, 
   .seccion-catalogo, 
