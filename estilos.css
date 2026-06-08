@@ -16,7 +16,7 @@ header {
     color: rgb(209, 209, 209);
     padding: 15px;
     text-align: center;
-    border-bottom: 5px solid #ffd996;
+    border-bottom: thick double #ffd996;
 }
 
 .header-name {
@@ -31,16 +31,23 @@ header {
     color: rgb(209, 209, 209);
 }
 
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
 .nav a {
     color: rgb(209, 209, 209);
-    text-decoration: wavy underline;
-    margin: 0 10px;
+    text-decoration: underline #ffd996;
+    margin: 0 5px;
 }
 
 .bienvenida {
     background-color: #0033a0;
     color: rgb(209, 209, 209);
-    padding: 15px 5px;
+    padding: 25px 15px; 
     text-align: center;
 }
 
@@ -53,38 +60,39 @@ header {
     font-size: 16px;
     margin: 5px 0;
 }
-
     
 .titulo-proyectos {
     text-align: center;
     font-size: 32px;
     color: rgb(209, 209, 209);
-    padding: 15px 0 15px;
+    padding: 15px 0;
     background: linear-gradient(90deg, #001a4d, #0033a0, #0057d9, #0033a0, #001a4d);
+    border: 1px solid #ffd996;
 }
 
 .seccion-proyectos {
     width: 100%;
     background: linear-gradient(90deg, #0057d9, #0033a0, #001a4d, #0033a0, #0057d9);
-    padding: 20px 20px 40px 20px;
-    overflow: hidden;
+    padding: 20px 10px 40px 10px;
 }
 
 .contenedor-proyectos {
-    max-width: 100%;
-    margin: 10px;
-    padding: 10px;
+    max-width: 1200px; 
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
 }
 
 .tarjeta-proyectos {
-    float: left;
-    width: 30%;
-    margin: 1.5%;
+    width: 100%; 
+    margin: 15px 10px;
     background-color: #0057d9;
     border-radius: 8px;
     padding-bottom: 20px;
     text-align: center;
     box-shadow: 8px 6px 12px rgba(0, 0, 0, 0.3);
+    border: 1px solid #ffd996;
 }
 
 .img-placeholder {
@@ -113,9 +121,15 @@ header {
     margin: 0 15px 15px;
 }
 
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
 .botones a {
-    padding: 6px 12px;
-    margin: 0 5px;
+    padding: 8px 14px; 
     background-color: #1e4c8c;
     color: rgb(209, 209, 209);
     text-decoration: none;
@@ -125,17 +139,28 @@ header {
 
 .botones a:hover {
     background-color: #0033a0;
-    color: rgb(209, 209, 209);
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 14px;
     transition: all 0.3s ease;
 }
 
 .footer {
     background: linear-gradient(90deg, #0057d9, #0033a0, #001a4d, #0033a0, #0057d9);
     color: rgb(209, 209, 209);
-    text-align: right;
+    text-align: center; 
     padding: 15px;
     border: 5px solid #ffd996;
+}
+
+@media (min-width: 600px) {
+    .tarjeta-proyectos {
+        width: calc(50% - 20px); 
+    }
+    .footer {
+        text-align: right; 
+    }
+}
+
+@media (min-width: 992px) {
+    .tarjeta-proyectos {
+        width: calc(33.33% - 20px); 
+    }
 }
