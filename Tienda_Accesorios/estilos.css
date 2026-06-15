@@ -1,9 +1,3 @@
-/* =========================================================
-   Hoja de estilos — Tienda eTrade
-   Arquitectura: CSS Variables + Grid + Flexbox + Mobile-First
-   Convención: BEM (bloque_elemento--modificador) en español
-   ========================================================= */
-
 /* ---------- Variables globales ---------- */
 :root {
   /* Paleta */
@@ -38,10 +32,20 @@
 }
 
 /* ---------- Reset básico ---------- */
-*, *::before, *::after { box-sizing: border-box; }
-body, h1, h2, h3, p, ul, figure { margin: 0; padding: 0; }
-ul { list-style: none; }
-a { color: inherit; text-decoration: none; }
+*, *::before, *::after { 
+  box-sizing: border-box; 
+}
+body, h1, h2, h3, p, ul, figure { 
+  margin: 0; 
+  padding: 0; 
+}
+ul { 
+  list-style: none; 
+}
+a { 
+  color: inherit; 
+  text-decoration: none; 
+}
 button { font: inherit; cursor: pointer; border: none; background: none; color: inherit; }
 img { max-width: 100%; display: block; }
 
@@ -53,26 +57,10 @@ body {
   font-size: 14px;
 }
 
-/* ---------- Marcadores de imagen (placeholders) ---------- */
-.marcador-imagen {
-  width: 100%;
-  /* aspect-ratio: 1 / 1; */
-  background:
-    linear-gradient(45deg, transparent 49%, var(--color-borde) 49%, var(--color-borde) 51%, transparent 51%),
-    linear-gradient(-45deg, transparent 49%, var(--color-borde) 49%, var(--color-borde) 51%, transparent 51%),
-    var(--color-fondo-suave);
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-sm);
-}
-.marcador-imagen--mini { width: 80px; height: 80px; aspect-ratio: 1; }
-
-
 
 /* =========================================================
    BARRA SUPERIOR
    ========================================================= */
-
-
 .barra-superior {
   background-color: var(--color-oscuro);
   color: #fff;
@@ -83,8 +71,13 @@ body {
   font-size: 12px;
 }
 .barra-superior_izquierda,
-.barra-superior_derecha { display: flex; gap: var(--espaciado-base); }
-.barra-superior_enlace:hover { text-decoration: underline; }
+.barra-superior_derecha { 
+  display: flex; 
+  gap: var(--espaciado-base); 
+}
+.barra-superior_enlace:hover { 
+  text-decoration: underline; 
+}
 
 /* =========================================================
    CABECERA
@@ -108,10 +101,19 @@ body {
   border: 1px solid var(--color-primario);
   border-radius: var(--radio-sm);
 }
-.cabecera_logo-texto { font-size: 1.1rem; }
+.cabecera_logo-texto { 
+  font-size: 1.1rem; 
+}
 
-.navegacion { flex: 1 1 100%; order: 3; }
-.navegacion_lista { display: flex; flex-wrap: wrap; gap: var(--espaciado-sm); }
+.navegacion { 
+  flex: 1 1 100%; 
+  order: 3; 
+}
+.navegacion_lista { 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: var(--espaciado-sm); 
+}
 .navegacion_enlace {
   display: inline-block;
   padding: var(--espaciado-xs) var(--espaciado-base);
@@ -466,25 +468,64 @@ margin: 0 60px; }
 .pie_lista { display: flex; flex-direction: column; gap: var(--espaciado-xs); font-size: 13px; color: var(--color-texto-suave); }
 .pie_lista a:hover { color: var(--color-primario); }
 .pie_app-texto { font-size: 12px; color: var(--color-texto-suave); margin-bottom: var(--espaciado-sm); }
-.pie_app { display: flex; gap: var(--espaciado-sm); align-items: center; }
-.pie_qr {
-  width: 70px; height: 70px;
-  background:
-    repeating-conic-gradient(#1c1c1c 0% 25%, #fff 0% 50%) 50% / 10px 10px,
-    #fff;
-  border: 1px solid var(--color-borde);
-  border-radius: var(--radio-sm);
-  flex-shrink: 0;
-}
-.pie_tiendas { display: flex; flex-direction: column; gap: var(--espaciado-xs); }
-.pie_tienda {
-  background: var(--color-oscuro);
-  color: #fff;
-  padding: var(--espaciado-xs) var(--espaciado-sm);
-  border-radius: var(--radio-sm);
-  font-size: 11px;
+/* Contenedor que junta el QR y las tiendas una al lado de la otra */
+.pie_app {
+  display: flex;
+  gap: 16px;                 /* Espacio de separación entre el QR y las tiendas */
+  align-items: center;       /* Centra verticalmente el QR con el bloque de tiendas */
+  width: 100%;
 }
 
+/* Caja contenedora del Código QR */
+.pie_qr {
+  width: 100px;               /* Tamaño cuadrado perfecto para el QR */
+  height: 100px;
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-sm);
+  padding: 4px;              /* Pequeño margen interno blanco para que el QR respire */
+  background-color: #ffffff; /* Asegura fondo blanco para que resalte */
+  flex-shrink: 0;            /* Evita que el navegador intente encoger el QR */
+}
+
+/* La imagen real del QR */
+.pie_qr img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       /* Ajusta el QR al cuadro sin recortarlo ni deformarlo */
+  display: block;
+}
+
+/* Contenedor de las tiendas (una encima de la otra) */
+.pie_tiendas {
+  display: flex;
+  flex-direction: column;    /* Apila los botones de las tiendas en vertical */
+  gap: 8px;                  /* Separa el botón de Apple del de Google */
+}
+
+/* Los enlaces/botones de las tiendas de aplicaciones */
+.pie_tienda_enlace {
+  display: flex;             /* Convertimos el botón en Flexbox para centrar la imagen dentro */
+  justify-content: center;   /* Centra la imagen horizontalmente */
+  align-items: center;       /* Centra la imagen verticalmente */
+  width: 150px;              /* Un ancho fijo ideal para los dos botones */
+  height: 50px;              /* ¡CLAVE! Forzamos a que ambos botones midan exactamente lo mismo de alto */
+  border-radius: 8px;
+  padding: 4px var(--espaciado-sm);
+
+  transition: transform 0.2s ease;
+}
+/* Las imágenes reales de los logos de Apple y Google Play */
+.pie_tienda_enlace img {
+  width: 100%;               /* Obliga al logo a ocupar el ancho de su contenedor */
+  height: 100%;              /* Mantiene la proporción original de la imagen */
+  object-fit: cover;
+  display: block;
+}
+
+/* EFECTO: Un sutil levantamiento al pasar el mouse por encima de las tiendas */
+.pie_tienda_enlace:hover {
+  transform: translateY(-2px);
+}
 .pie_inferior {
   display: flex;
   flex-direction: column;
