@@ -3,64 +3,64 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>eTrade — Explora Todos los Productos</title>
+  <title>Tienda Accesorios</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
 
   <!-- ============== BARRA SUPERIOR (idioma / moneda / sesión) ============== -->
   <div class="barra-superior">
-    <div class="barra-superior__izquierda">
-      <span class="barra-superior__item">ES ▾</span>
-      <span class="barra-superior__item">USD ▾</span>
+    <div class="barra-superior_izquierda">
+      <span class="barra-superior_item">ES ▾</span>
+      <span class="barra-superior_item">USD ▾</span>
     </div>
-    <div class="barra-superior__derecha">
-      <a href="#" class="barra-superior__enlace">Únete</a>
-      <a href="#" class="barra-superior__enlace">Iniciar sesión</a>
+    <div class="barra-superior_derecha">
+      <a href="#" class="barra-superior_enlace">Únete</a>
+      <a href="#" class="barra-superior_enlace">Iniciar sesión</a>
     </div>
   </div>
 
   <!-- ============== CABECERA PRINCIPAL ============== -->
   <header class="cabecera">
-    <div class="cabecera__logo">
-      <span class="cabecera__logo-icono">🛒</span>
-      <span class="cabecera__logo-texto">eTrade</span>
+    <div class="cabecera_logo">
+      <span class="cabecera_logo-icono">🛒</span>
+      <span class="cabecera_logo-texto">eTrade</span>
     </div>
 
     <nav class="navegacion" aria-label="Navegación principal">
-      <ul class="navegacion__lista">
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace navegacion__enlace--activo">Inicio</a></li>
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace">Tienda</a></li>
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace">Páginas</a></li>
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace">Acerca</a></li>
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace">Blog</a></li>
-        <li class="navegacion__item"><a href="#" class="navegacion__enlace">Contacto</a></li>
+      <ul class="navegacion_lista">
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace navegacion_enlace--activo">Inicio</a></li>
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace">Tienda</a></li>
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace">Páginas</a></li>
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace">Acerca</a></li>
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace">Blog</a></li>
+        <li class="navegacion_item"><a href="#" class="navegacion_enlace">Contacto</a></li>
       </ul>
     </nav>
 
-    <div class="cabecera__acciones">
+    <div class="cabecera_acciones">
       <div class="buscador">
-        <span class="buscador__icono" aria-hidden="true">🔍</span>
-        <input type="search" class="buscador__campo" placeholder="¿Qué estás buscando?" />
+        <span class="buscador_icono" aria-hidden="true">🔍</span>
+        <input type="search" class="buscador_campo" placeholder="¿Qué estás buscando?" />
       </div>
-      <button class="cabecera__boton-icono" aria-label="Favoritos">♡</button>
-      <button class="cabecera__boton-icono cabecera__boton-icono--badge" aria-label="Carrito" data-badge="0">🛍</button>
-      <button class="cabecera__boton-icono" aria-label="Mi cuenta">👤</button>
+      <button class="cabecera_boton-icono" aria-label="Favoritos">♡</button>
+      <button class="cabecera_boton-icono cabecera_boton-icono--badge" aria-label="Carrito" data-badge="0">🛍</button>
+      <button class="cabecera_boton-icono" aria-label="Mi cuenta">👤</button>
     </div>
   </header>
 
   <!-- ============== ENCABEZADO DE PÁGINA (breadcrumb + título) ============== -->
   <section class="encabezado-pagina">
-    <div class="encabezado-pagina__texto">
+    <div class="encabezado-pagina_texto">
       <nav class="ruta" aria-label="Migas de pan">
-        <a href="#" class="ruta__enlace">Inicio</a>
-        <span class="ruta__separador">›</span>
-        <a href="#" class="ruta__enlace">Tienda</a>
+        <a href="#" class="ruta_enlace">Inicio</a>
+        <span class="ruta_separador">›</span>
+        <a href="#" class="ruta_enlace">Tienda</a>
       </nav>
-      <h1 class="encabezado-pagina__titulo">Explora Todos los Productos</h1>
+      <h1 class="encabezado-pagina_titulo">Explora Todos los Productos</h1>
     </div>
-    <div class="encabezado-pagina__imagen" aria-hidden="true">
-      <div class="marcador-imagen marcador-imagen--mini"></div>
+    <div class="encabezado-pagina_imagen" aria-hidden="true">
+      <img src="imagenes/eco_dot.jpg" alt="Parlante Inteligente Eco Dot" />
     </div>
   </section>
 
@@ -71,12 +71,12 @@
     <aside class="filtros" aria-label="Filtros de búsqueda">
 
       <!-- Categorías -->
-      <section class="filtros__bloque">
-        <header class="filtros__cabecera">
-          <h2 class="filtros__titulo">Categorías</h2>
-          <span class="filtros__toggle">−</span>
+      <section class="filtros_bloque">
+        <header class="filtros_cabecera">
+          <h2 class="filtros_titulo">Categorías</h2>
+          <span class="filtros_toggle">−</span>
         </header>
-        <ul class="filtros__lista">
+        <ul class="filtros_lista">
           <li><label><input type="checkbox" /> Audífonos</label></li>
           <li><label><input type="checkbox" /> TV</label></li>
           <li><label><input type="checkbox" /> Joyería</label></li>
@@ -86,12 +86,12 @@
       </section>
 
       <!-- Género -->
-      <section class="filtros__bloque">
-        <header class="filtros__cabecera">
-          <h2 class="filtros__titulo">Género</h2>
-          <span class="filtros__toggle">−</span>
+      <section class="filtros_bloque">
+        <header class="filtros_cabecera">
+          <h2 class="filtros_titulo">Género</h2>
+          <span class="filtros_toggle">−</span>
         </header>
-        <ul class="filtros__lista">
+        <ul class="filtros_lista">
           <li><label><input type="radio" name="genero" /> Hombre</label></li>
           <li><label><input type="radio" name="genero" /> Mujer</label></li>
           <li><label><input type="radio" name="genero" /> Unisex</label></li>
@@ -99,12 +99,12 @@
       </section>
 
       <!-- Colores -->
-      <section class="filtros__bloque">
-        <header class="filtros__cabecera">
-          <h2 class="filtros__titulo">Colores</h2>
-          <span class="filtros__toggle">−</span>
+      <section class="filtros_bloque">
+        <header class="filtros_cabecera">
+          <h2 class="filtros_titulo">Colores</h2>
+          <span class="filtros_toggle">−</span>
         </header>
-        <ul class="filtros__colores">
+        <ul class="filtros_colores">
           <li><button class="color color--rojo" aria-label="Rojo"></button></li>
           <li><button class="color color--negro" aria-label="Negro"></button></li>
           <li><button class="color color--celeste" aria-label="Celeste"></button></li>
@@ -115,12 +115,12 @@
       </section>
 
       <!-- Tallas -->
-      <section class="filtros__bloque">
-        <header class="filtros__cabecera">
-          <h2 class="filtros__titulo">Talla</h2>
-          <span class="filtros__toggle">−</span>
+      <section class="filtros_bloque">
+        <header class="filtros_cabecera">
+          <h2 class="filtros_titulo">Talla</h2>
+          <span class="filtros_toggle">−</span>
         </header>
-        <ul class="filtros__tallas">
+        <ul class="filtros_tallas">
           <li><button class="talla">XS</button></li>
           <li><button class="talla">S</button></li>
           <li><button class="talla">M</button></li>
@@ -132,12 +132,12 @@
       </section>
 
       <!-- Precio -->
-      <section class="filtros__bloque">
-        <header class="filtros__cabecera">
-          <h2 class="filtros__titulo">Precio</h2>
-          <span class="filtros__toggle">−</span>
+      <section class="filtros_bloque">
+        <header class="filtros_cabecera">
+          <h2 class="filtros_titulo">Precio</h2>
+          <span class="filtros_toggle">−</span>
         </header>
-        <ul class="filtros__lista">
+        <ul class="filtros_lista">
           <li><label><input type="radio" name="precio" /> $0 – $50</label></li>
           <li><label><input type="radio" name="precio" /> $50 – $150</label></li>
           <li><label><input type="radio" name="precio" /> $150 – $300</label></li>
@@ -146,211 +146,268 @@
         </ul>
       </section>
 
-      <button class="boton boton--primario filtros__reset">Reiniciar Filtros</button>
+      <button class="boton boton--primario filtros_reset">Reiniciar Filtros</button>
     </aside>
 
     <!-- ========== CUADRÍCULA DE PRODUCTOS ========== -->
     <main class="productos" aria-label="Listado de productos">
-      <div class="productos__rejilla">
+      <div class="productos_rejilla">
 
-        <!-- Tarjeta de producto (repetida) -->
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">30% OFF</span>
-            <div class="marcador-imagen"></div>
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">30% OFF</span>
+            <img src="imagenes/wireless_headset.png" alt="Audífonos Inalámbricos" />
           </div>
-          <h3 class="tarjeta__nombre">Audífonos Inalámbricos 3D</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$580</span> <span class="tarjeta__precio--actual">$400</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Audífonos Inalámbricos 3D</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$580</span> 
+            <span class="precio-ahora">$400</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--rojo"></li>
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">40% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">40% OFF</span>
+            <img src="imagenes/ps_control.png" alt="Control Inalámbrico" />
           </div>
-          <h3 class="tarjeta__nombre">Control Inalámbrico PS2 DualShock</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$49.99</span> <span class="tarjeta__precio--actual">$29.99</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Control Inalámbrico PS2 DualShock</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$49.99</span> 
+            <span class="precio-ahora">$29.99</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">47% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">47% OFF</span>
+            <img src="imagenes/keyboard_gaming.png" alt="Teclado wireless" />
           </div>
-          <h3 class="tarjeta__nombre">Combo Teclado y Mouse Cableado</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$59</span> <span class="tarjeta__precio--actual">$32.99</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Teclado Gaming</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$49.99</span> 
+            <span class="precio-ahora">$29.99</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--rojo"></li>
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">25% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">25% OFF</span>
+            <img src="imagenes/logitech_streamcam.png" alt="Audífonos Inalámbricos" />
           </div>
-          <h3 class="tarjeta__nombre">Logitech StreamCam</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$249</span> <span class="tarjeta__precio--actual">$199</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Logitech StreamCam</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$580</span> 
+            <span class="precio-ahora">$400</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--rojo"></li>
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">7% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">7% OFF</span>
+            <img src="imagenes/wireless_3D.png" alt="Audifonos wireless" />
           </div>
-          <h3 class="tarjeta__nombre">Audífonos Inalámbricos 3D</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$417</span> <span class="tarjeta__precio--actual">$387</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Audífonos Inalámbricos 3D</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$417</span> 
+            <span class="precio-ahora">$387</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">12% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">12% OFF</span>
+            <img src="imagenes/Bass.png" alt="Bocina wireless" />
           </div>
-          <h3 class="tarjeta__nombre">Bocina Bass Merits Crisly</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$265</span> <span class="tarjeta__precio--actual">$233</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Bocina Bass Merits Crisly</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$265</span> 
+            <span class="precio-ahora">$233</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">33% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">33% OFF</span>
+            <img src="imagenes/wireless_mouse.png" alt="Audífonos Inalámbricos" />
           </div>
-          <h3 class="tarjeta__nombre">Mouse Logitech</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$150</span> <span class="tarjeta__precio--actual">$100</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Mouse Logitech</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$150</span> 
+            <span class="precio-ahora">$100</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--rojo"></li>
             <li class="color color--negro"></li>
+            <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">40% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">40% OFF</span>
+            <img src="imagenes/xbox_controller.png" alt="Control wireless" />
           </div>
-          <h3 class="tarjeta__nombre">Control PlayStation</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$49.99</span> <span class="tarjeta__precio--actual">$29.99</span></p>
-          <ul class="tarjeta__variantes">
-            <li class="color color--rojo"></li>
+        
+          <h3>Control Inalámbrico PS2 DualShock</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$49.99</span> 
+            <span class="precio-ahora">$29.99</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-        <article class="tarjeta">
-          <div class="tarjeta__media">
-            <span class="tarjeta__descuento">11% OFF</span>
-            <div class="marcador-imagen"></div>
+        </div>
+
+        <div class="tarjeta-producto">
+
+          <div class="contenedor-foto">
+            <span class="etiqueta-descuento">11% OFF</span>
+            <img src="imagenes/headset_astro.png" alt="Control wireless" />
           </div>
-          <h3 class="tarjeta__nombre">Audífonos Zone</h3>
-          <p class="tarjeta__precio"><span class="tarjeta__precio--antiguo">$200</span> <span class="tarjeta__precio--actual">$179</span></p>
-          <ul class="tarjeta__variantes">
+        
+          <h3>Audífonos Zone</h3>
+
+          <p class="precios">
+            <span class="precio-antes">$200</span> 
+            <span class="precio-ahora">$179</span>
+          </p>
+          <ul class="tarjeta_variantes">
             <li class="color color--negro"></li>
             <li class="color color--azul"></li>
           </ul>
-        </article>
 
-      </div>
+        </div>
 
-      <div class="productos__paginacion">
+      <div class="productos_paginacion">
         <button class="boton boton--secundario">Cargar más</button>
       </div>
-    </main>
-  </div>
+
+    </main></div>
 
   <!-- ============== NEWSLETTER ============== -->
-  <section class="boletin">
-    <div class="boletin__contenido">
-      <span class="boletin__etiqueta">◎ Boletín</span>
-      <h2 class="boletin__titulo">Suscríbete a nuestro boletín</h2>
-      <form class="boletin__formulario" onsubmit="return false;">
-        <input type="email" class="boletin__campo" placeholder="ejemplo@correo.com" />
-        <button class="boton boton--oscuro">Suscribirse</button>
-      </form>
-      <p class="boletin__sitio">www.mitiendaonline.com</p>
+  <section class="boletin-fondo">
+  <div class="boletin-contenido">
+    <h2>Suscríbete a nuestro Boletín</h2>
+    <p>Recibe las mejores ofertas y novedades directamente en tu correo.</p>
+    
+    <div class="boletin-formulario">
+      <input type="email" class="boletin-input" placeholder="✉️ ejemplo@gmail.com" />
+      <button type="submit" class="boletin-boton" >Suscribirse</button>
     </div>
-    <div class="boletin__imagen" aria-hidden="true">
-      <div class="marcador-imagen"></div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <!-- ============== BENEFICIOS ============== -->
   <section class="beneficios">
     <article class="beneficio">
-      <span class="beneficio__icono">🚚</span>
+      <span class="beneficio_icono">🚚</span>
       <div>
-        <h3 class="beneficio__titulo">Envío Rápido y Seguro</h3>
-        <p class="beneficio__texto">A tu servicio.</p>
+        <h3 class="beneficio_titulo">Envío Rápido y Seguro</h3>
+        <p class="beneficio_texto">A tu servicio.</p>
       </div>
     </article>
     <article class="beneficio">
-      <span class="beneficio__icono">🏅</span>
+      <span class="beneficio_icono">🏅</span>
       <div>
-        <h3 class="beneficio__titulo">Garantía de Devolución</h3>
-        <p class="beneficio__texto">En 10 días.</p>
+        <h3 class="beneficio_titulo">Garantía de Devolución</h3>
+        <p class="beneficio_texto">En 10 días.</p>
       </div>
     </article>
     <article class="beneficio">
-      <span class="beneficio__icono">📦</span>
+      <span class="beneficio_icono">📦</span>
       <div>
-        <h3 class="beneficio__titulo">Política de 24 Horas</h3>
-        <p class="beneficio__texto">Sin preguntas.</p>
+        <h3 class="beneficio_titulo">Política de 24 Horas</h3>
+        <p class="beneficio_texto">Sin preguntas.</p>
       </div>
     </article>
     <article class="beneficio">
-      <span class="beneficio__icono">🎧</span>
+      <span class="beneficio_icono">🎧</span>
       <div>
-        <h3 class="beneficio__titulo">Soporte Pro</h3>
-        <p class="beneficio__texto">24/7 en vivo.</p>
+        <h3 class="beneficio_titulo">Soporte Pro</h3>
+        <p class="beneficio_texto">24/7 en vivo.</p>
       </div>
     </article>
   </section>
 
   <!-- ============== PIE DE PÁGINA ============== -->
   <footer class="pie">
-    <div class="pie__columnas">
+    <div class="pie_columnas">
 
       <!-- Columna 1: Soporte -->
-      <section class="pie__columna">
-        <h3 class="pie__titulo">Soporte</h3>
-        <address class="pie__direccion">
+      <section class="pie_columna">
+        <h3 class="pie_titulo">Soporte</h3>
+        <address class="pie_direccion">
           165 Market Street,<br />
           Las Vegas, LA 99201,<br />
           Estados Unidos.
         </address>
-        <p class="pie__contacto">✉ contacto@dominio.com</p>
-        <p class="pie__contacto">☎ +00 950-315-5862</p>
+        <p class="pie_contacto">✉ contacto@dominio.com</p>
+        <p class="pie_contacto">☎ +00 950-315-5862</p>
       </section>
 
       <!-- Columna 2: Cuenta -->
-      <section class="pie__columna">
-        <h3 class="pie__titulo">Cuenta</h3>
-        <ul class="pie__lista">
+      <section class="pie_columna">
+        <h3 class="pie_titulo">Cuenta</h3>
+        <ul class="pie_lista">
           <li><a href="#">Mi Cuenta</a></li>
           <li><a href="#">Acceso</a></li>
           <li><a href="#">Carrito</a></li>
@@ -359,9 +416,9 @@
       </section>
 
       <!-- Columna 3: Enlaces rápidos -->
-      <section class="pie__columna">
-        <h3 class="pie__titulo">Enlaces Rápidos</h3>
-        <ul class="pie__lista">
+      <section class="pie_columna">
+        <h3 class="pie_titulo">Enlaces Rápidos</h3>
+        <ul class="pie_lista">
           <li><a href="#">Acerca de Nosotros</a></li>
           <li><a href="#">Política de Privacidad</a></li>
           <li><a href="#">Términos de Uso</a></li>
@@ -370,32 +427,32 @@
       </section>
 
       <!-- Columna 4: Descarga la app -->
-      <section class="pie__columna">
-        <h3 class="pie__titulo">Descarga la App</h3>
-        <p class="pie__app-texto">Ahorra $3 con la App. Solo para usuarios nuevos.</p>
-        <div class="pie__app">
-          <div class="pie__qr" aria-label="Código QR">
+      <section class="pie_columna">
+        <h3 class="pie_titulo">Descarga la App</h3>
+        <p class="pie_app-texto">Ahorra $3 con la App. Solo para usuarios nuevos.</p>
+        <div class="pie_app">
+          <div class="pie_qr" aria-label="Código QR">
             <!-- Placeholder QR generado con gradiente -->
           </div>
-          <div class="pie__tiendas">
-            <a href="#" class="pie__tienda">⬇ App Store</a>
-            <a href="#" class="pie__tienda">⬇ Google Play</a>
+          <div class="pie_tiendas">
+            <a href="#" class="pie_tienda">⬇ App Store</a>
+            <a href="#" class="pie_tienda">⬇ Google Play</a>
           </div>
         </div>
       </section>
     </div>
 
     <!-- Pie inferior -->
-    <div class="pie__inferior">
-      <ul class="pie__redes">
+    <div class="pie_inferior">
+      <ul class="pie_redes">
         <li><a href="#" aria-label="Facebook">f</a></li>
         <li><a href="#" aria-label="Instagram">◎</a></li>
         <li><a href="#" aria-label="Twitter">𝕏</a></li>
         <li><a href="#" aria-label="LinkedIn">in</a></li>
         <li><a href="#" aria-label="YouTube">▶</a></li>
       </ul>
-      <p class="pie__copy">© 2026 Todos los derechos reservados por eTrade.</p>
-      <div class="pie__pagos">
+      <p class="pie_copy">© 2026 Todos los derechos reservados por eTrade.</p>
+      <div class="pie_pagos">
         <span>Aceptamos</span>
         <span class="pago pago--paypal">PayPal</span>
         <span class="pago pago--master">MC</span>
