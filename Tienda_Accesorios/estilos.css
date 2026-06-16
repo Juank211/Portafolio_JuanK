@@ -121,7 +121,9 @@ body {
   border-radius: 999px;
   font-size: 13px;
 }
-.navegacion_enlace:hover { background-color: var(--color-fondo-suave); }
+.navegacion_enlace:hover { 
+  background-color: var(--color-fondo-suave); 
+}
 .navegacion_enlace--activo {
   background-color: var(--color-oscuro);
   color: #fff;
@@ -196,9 +198,19 @@ body {
   object-fit: cover;          /* Evita que la foto se estire o se aplaste */
   display: block;
 }
-.ruta { display: flex; gap: var(--espaciado-xs); font-size: 12px; color: var(--color-texto-suave); }
-.ruta_enlace:hover { color: var(--color-primario); }
-.encabezado-pagina_titulo { font-size: 1.5rem; margin-top: var(--espaciado-xs); }
+.ruta { 
+  display: flex; 
+  gap: var(--espaciado-xs); 
+  font-size: 12px; 
+  color: var(--color-texto-suave); 
+}
+.ruta_enlace:hover { 
+  color: var(--color-primario); 
+}
+.encabezado-pagina_titulo { 
+  font-size: 1.5rem; 
+  margin-top: var(--espaciado-xs); 
+}
 
 /* =========================================================
    CONTENIDO PRINCIPAL — GRID
@@ -215,7 +227,11 @@ body {
 /* =========================================================
    FILTROS (ASIDE)
    ========================================================= */
-.filtros { display: flex; flex-direction: column; gap: var(--espaciado-md); }
+.filtros { 
+  display: flex; 
+  flex-direction: column; 
+  gap: var(--espaciado-md); 
+}
 .filtros_bloque {
   border-bottom: 1px solid var(--color-borde);
   padding-bottom: var(--espaciado-base);
@@ -298,8 +314,6 @@ body {
 
 /* Tarjeta de producto */
 
-
-/* La caja total de la tarjeta */
 .tarjeta-producto {
   background-color: #ffffff; /* Color blanco de fondo */
   border-radius: 8px;        /* Esquinas redondeadas */
@@ -364,8 +378,8 @@ body {
 .productos_paginacion {
   display: flex;             /* Lo convertimos en un contenedor flexible */
   justify-content: center;   /* Centra el botón de forma horizontal */
-  margin-top: 30px;          /* Le da un espacio libre arriba para separarlo de los productos */
-  margin-bottom: 30px;       /* Le da un espacio libre abajo */
+  margin-top: var(--espaciado-lg);          /* Le da un espacio libre arriba para separarlo de los productos */
+  margin-bottom: var(--espaciado-xl);       /* Le da un espacio libre abajo */
   width: 100%;               /* Asegura que ocupe todo el ancho disponible para poder centrar */
 }
 
