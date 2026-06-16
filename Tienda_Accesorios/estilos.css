@@ -65,9 +65,10 @@ body {
   background-color: var(--color-oscuro);
   color: #fff;
   display: flex;
+  flex-wrap: wrap;         /* 🌟 Añadido: Permite que los botones bajen si no caben */
   justify-content: space-between;
   align-items: center;
-  padding: var(--espaciado-sm) 90px;
+  padding: var(--espaciado-sm) var(--espaciado-xl);
   font-size: 12px;
 }
 .barra-superior_izquierda,
@@ -195,7 +196,9 @@ body {
 .encabezado-pagina_imagen img {
   width: 100%;                /* Ocupa el 100% de los 120px del contenedor */
   height: 100%;               /* Ocupa el 100% de alto del contenedor */
-  object-fit: cover;          /* Evita que la foto se estire o se aplaste */
+  max-width: 100%;            /*Le prohibe ser mas grande que su contenedor*/
+  max-height: 100%;
+  object-fit: contain;          /* Evita que la foto se estire o se aplaste */
   display: block;
 }
 .ruta { 
@@ -335,7 +338,7 @@ body {
 .contenedor-foto img {
   width: 100%;               /* Obliga a la foto a medir los 280px de ancho del contenedor */
   height: 100%;              /* Obliga a la foto a medir los 280px de alto del contenedor */
-  object-fit: cover;         /* Recorta los lados sobrantes para que NUNCA se estire ni se aplaste */
+  object-fit: contain;         /* Recorta los lados sobrantes para que NUNCA se estire ni se aplaste */
   display: block;            /* Evita espacios en blanco extraños debajo de la foto */
   border-radius: 8px;
   background-color: #f5f6f8;
@@ -419,7 +422,9 @@ body {
 .boletin-formulario {
   display: flex;
   gap: 10px;                 /* Separa el input del botón */
+  flex-direction: column;
   margin-top: 20px;
+  width: 100%;
   max-width: 450px;          /* Evita que el formulario se estire demasiado */
 }
 
@@ -448,6 +453,15 @@ body {
   transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
+/* Estilos para el texto de la web/correo al final del boletín */
+.boletin-contenido .correo {
+  font-weight: 700;                 /* Forzamos la letra a negrilla (Bold) */
+  padding-top: var(--espaciado-md); /* Agrega el espacio superior usando tus variables (1.5rem) */
+  
+  font-size: 20px;                  /* Un tamaño un poco más pequeño para mantener la jerarquía */
+  text-align: left;                 /* Se mantiene alineado a la izquierda como el resto del bloque */
+  margin: 0;                        /* Limpiamos márgenes por defecto del navegador */
+}
 /* =========================================================
    BENEFICIOS
    ========================================================= */
@@ -559,14 +573,45 @@ margin: 0 60px; }
   display: inline-flex; align-items: center; justify-content: center;
 }
 .pie_redes a:hover { background: var(--color-primario); color: #fff; }
-.pie_pagos { display: flex; gap: var(--espaciado-sm); align-items: center; }
-.pago {
-  padding: 2px 8px; border-radius: var(--radio-sm); font-weight: 700; font-size: 11px;
-  border: 1px solid var(--color-borde);
+/* Contenedor principal de los pagos */
+.pie_pagos { 
+  display: flex; 
+  gap: var(--espaciado-sm); 
+  align-items: center; 
 }
-.pago--paypal { color: #003087; }
-.pago--master { color: #eb001b; }
-.pago--visa { color: #1a1f71; }
+
+/* El texto que dice "Aceptamos" */
+.pie_pagos span {
+  font-size: 13px;
+  color: var(--color-texto-suave);
+  margin-right: 4px;
+}
+
+/* La cajita contenedora para cada logo */
+.pago_marca {
+  width: 50px;               /* Ancho estándar ideal para los logos de tarjetas */
+  height: 30px;              /* Alto estándar fijo para que todas midan lo mismo */
+  background-color: #ffffff; /* Fondo blanco para que los logos resalten del fondo oscuro */
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-sm);
+  padding: 3px 6px;          /* Espacio interno para que el logo respire dentro del cuadro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;            /* Evita que el navegador deforme las cajas */
+}
+
+/* La imagen real del logo (.png) */
+.pago_marca img {
+  width: 100%;
+  height: 100%;
+  
+  /* MÁGIA: Ajusta el logo al recuadro de 50x30px de forma totalmente proporcional, 
+     sin estirarlo, aplastarlo ni perder su resolución original */
+  object-fit: contain;       
+  
+  display: block;
+}
 
 /* =========================================================
    BREAKPOINTS — Tablet (≥ 640px)
@@ -577,7 +622,9 @@ margin: 0 60px; }
   .pie_columnas { grid-template-columns: repeat(2, 1fr); }
   .boletin { grid-template-columns: 1fr 1fr; }
   .boletin_imagen { display: block; }
-  .boletin_imagen .marcador-imagen { height: 100%; aspect-ratio: auto; }
+  .boletin-formulario{ flex-direction: row; }
+  .boletin-boton{ width: auto; }
+  .boletin-contenido .correo { text-align: left;}
 }
 
 /* =========================================================
@@ -596,4 +643,67 @@ margin: 0 60px; }
   .buscador { min-width: 260px; }
 
   .pie_inferior { flex-direction: row; justify-content: space-between; }
+}
+
+/* =========================================================
+   BREAKPOINTS — Celulares Pequeños (≤ 480px)
+   ========================================================= */
+@media (max-width: 480px) {
+
+  /* 1. Reubicar y centrar la Barra Superior */
+  .barra-superior {
+    flex-direction: column;    /* Apila idioma arriba y botones abajo */
+    gap: var(--espaciado-xs);
+    padding: var(--espaciado-sm);
+    text-align: center;
+  }
+  .barra-superior_izquierda, 
+  .barra-superior_derecha {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* 2. Reubicar el Banner del Encabezado (Texto arriba, Echo Dot abajo) */
+  .cabecera_banner {
+    flex-direction: column;    /* Pasa de horizontal a vertical */
+    text-align: center;
+    gap: var(--espaciado-base);
+    padding: var(--espaciado-base);
+  }
+  .cabecera_banner-contenido {
+    align-items: center;       /* Centra el botón y el texto */
+  }
+  .cabecera_banner h1 {
+    font-size: 1.5rem;         /* Reduce el tamaño de la letra para que no se corte */
+  }
+  .cabecera_banner-img {
+    width: 80px;               /* Achica un poco el Echo Dot para que quepa bien */
+    height: 80px;
+  }
+
+  /* 3. Forzar 1 sola columna en los productos para móviles */
+  .productos_rejilla {
+    grid-template-columns: 1fr !important; /* El !important asegura que rompa cualquier otra regla anterior */
+    gap: var(--espaciado-base);
+  }
+
+  /* 4. Apilar los beneficios verticalmente */
+  .beneficios {
+    grid-template-columns: 1fr !important;
+    text-align: center;
+  }
+  .beneficio_tarjeta {
+    flex-direction: column;    /* Icono arriba, texto abajo */
+    align-items: center;
+  }
+
+  /* 5. Centrar el Pie de Página Inferior (Redes, Copy y Tarjetas) */
+  .pie_inferior {
+    flex-direction: column;    /* Todo uno abajo del otro en el centro */
+    gap: var(--espaciado-base);
+    text-align: center;
+  }
+  .pie_pagos {
+    justify-content: center;   /* Centra tus logos .png de Visa/Paypal */
+  }
 }
