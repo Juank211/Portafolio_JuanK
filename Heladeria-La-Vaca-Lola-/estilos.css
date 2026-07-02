@@ -35,6 +35,7 @@ body {
     background-color: var(--crema-claro);
     font-family: var(--fuente-textos);
     color: var(--negro-profundo);
+    background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
     overflow-x: hidden;
     line-height: 1.6;
 }
@@ -135,6 +136,7 @@ a {
     padding: 5px 15px;
     border: var(--borde-grueso);
     box-shadow: var(--sombra-plana);
+    animation: vibrar 4s infinite ease-in-out;
 }
 
 .hero-descripcion {
@@ -186,6 +188,11 @@ a {
   z-index: 2;
 }
 
+@keyframes vibrar {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-1deg); }
+    75% { transform: rotate(1deg); }
+}
 /* ==========================================================================
   5. SECCIÓN DE PRENSA (MARQUESINA ANIME / TEXTO DE CORRIDO)
    ========================================================================== */
@@ -241,6 +248,7 @@ a {
 }
 
 .tarjeta-helado {
+  position: relative;
   background-color: var(--blanco-puro);
   border: var(--borde-grueso);
   box-shadow: var(--sombra-plana-tarjeta);
@@ -249,13 +257,26 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.tarjeta-helado:nth-child(3n+1) { transform: rotate(-1deg); }
+.tarjeta-helado:nth-child(3n+2) { transform: rotate(1deg); }
+.tarjeta-helado:nth-child(3n) { transform: rotate(-0.5deg); }
+
 .tarjeta-helado:hover {
-  transform: translate(-4px, -4px);
+  transform: rotate(0deg) translate(-4px, -4px);
   box-shadow: 10px 10px 0px var(--negro-profundo);
 }
 
 .tarjeta-helado:nth-child(even) {
   background-color: #FFFBF0;
+}
+
+/* Añade este estilo para que las tarjetas pares tengan un distintivo */
+.tarjeta-helado:nth-child(even)::after {
+    content: '🔥';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 3rem;
 }
 
 .tarjeta-imagen {
@@ -322,7 +343,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.1s ease;
+  transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .boton-agregar:hover {
@@ -330,6 +351,10 @@ a {
   color: var(--blanco-puro);
   transform: translate(-1px, -1px);
   box-shadow: 3px 3px 0px var(--negro-profundo);
+}
+
+.boton-agregar:active {
+    transform: scale(0.9); /* Efecto de rebote al hacer click */
 }
 
 /* ==========================================================================
