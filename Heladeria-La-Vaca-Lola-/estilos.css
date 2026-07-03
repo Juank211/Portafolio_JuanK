@@ -32,12 +32,12 @@ html {
 }
 
 body {
-    background-color: var(--crema-claro);
-    font-family: var(--fuente-textos);
-    color: var(--negro-profundo);
-    background-image: url("https://www.transparenttextures.com/patterns/notebook.png");
-    overflow-x: hidden;
-    line-height: 1.6;
+  font-family: var(--fuente-textos);
+  color: var(--negro-profundo);
+  background-color: var(--naranja-mango);
+  background-image: url("https://www.transparenttextures.com/patterns/brick-wall.png");
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2, h3 {
@@ -60,7 +60,8 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    background-color: var(--blanco-puro);
+    background-color: var(--crema-claro);
+    background-image: url("https://www.transparenttextures.com/patterns/old-wall.png");
     border-bottom: var(--borde-grueso);
     position: sticky;
     top: 0;
@@ -136,8 +137,8 @@ a {
     padding: 5px 15px;
     border: var(--borde-grueso);
     box-shadow: var(--sombra-plana);
-    animation: vibrar 4s infinite ease-in-out;
-}
+    animation: drunk-shake 5s infinite;
+  }
 
 .hero-descripcion {
     font-size: 1.2rem;
@@ -186,13 +187,18 @@ a {
   height: auto;
   position: relative;
   z-index: 2;
+  border-radius: 30px;
 }
 
-@keyframes vibrar {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(-1deg); }
-    75% { transform: rotate(1deg); }
+@keyframes drunk-shake {
+    0%, 100% { transform: rotate(0deg) translate(0, 0); }
+    10% { transform: rotate(-3deg) translate(-2px, 0); }
+    20% { transform: rotate(3deg) translate(2px, 0); }
+    30% { transform: rotate(-2deg) translate(-1px, 0); }
+    40% { transform: rotate(2deg) translate(1px, 0); }
+    50% { transform: rotate(0deg) translate(0, 0); }
 }
+
 /* ==========================================================================
   5. SECCIÓN DE PRENSA (MARQUESINA ANIME / TEXTO DE CORRIDO)
    ========================================================================== */
@@ -270,15 +276,6 @@ a {
   background-color: #FFFBF0;
 }
 
-/* Añade este estilo para que las tarjetas pares tengan un distintivo */
-.tarjeta-helado:nth-child(even)::after {
-    content: '🔥';
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 3rem;
-}
-
 .tarjeta-imagen {
   border-bottom: var(--borde-grueso);
   background-color: #F3F4F6;
@@ -292,6 +289,7 @@ a {
 .tarjeta-imagen img {
   max-height: 100%;
   object-fit: contain;
+  border-radius: 12px 4px 12px 4px;
 }
 
 .tarjeta-info {
@@ -362,6 +360,7 @@ a {
    ========================================================================== */
 .seccion-destacado {
   background-color: var(--blanco-puro);
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
   border-top: var(--borde-grueso);
   border-bottom: var(--borde-grueso);
   display: flex;
@@ -384,6 +383,21 @@ a {
 .destacado-imagen img {
   max-width: 80%;
   height: auto;
+  transition: transform 0.5s ease;
+}
+
+.seccion-destacado:hover .destacado-imagen img {
+  transform: scale(1.1) rotate(5deg); /* El helado 'se mueve' hacia el usuario */
+}
+
+/* Cambia el color de fondo de la sección al hacer hover global */
+.seccion-destacado {
+  transition: background-color 0.4s ease;
+}
+
+.seccion-destacado:hover {
+  background-color: var(--verde-tropical); /* Se vuelve verde neón al pasar el mouse */
+  background-image: url("https://www.transparenttextures.com/patterns/soft-wallpaper.png");
 }
 
 .destacado-contenido {
@@ -412,6 +426,7 @@ a {
 .descripcion-destacado {
   font-size: 1.1rem;
   margin-bottom: 25px;
+
 }
 
 .destacado-barra-votos {
@@ -485,12 +500,18 @@ a {
 
 .subseccion-locales {
   border-right: var(--borde-grueso);
-  background-color: #F9FAFB;
+  background-color: var(--verde-tropical);
+  background-image: url("https://www.transparenttextures.com/patterns/gravel.png");
+}
+.subseccion-eventos {
+  background-color: var(--rosa-lola);
+  background-image: url("https://www.transparenttextures.com/patterns/french-stucco.png");
 }
 
 .titulo-seccion-pequeno {
   font-size: 2.2rem;
   margin-bottom: 30px;
+  color: var(--naranja-mango);
 }
 
 .tarjeta-local {
@@ -505,6 +526,7 @@ a {
   font-size: 1.2rem;
   margin-bottom: 10px;
   color: var(--rosa-lola);
+  background-color: var(--blanco-puro);
 }
 
 .subseccion-eventos {
@@ -541,7 +563,7 @@ a {
 }
 
 .formulario-contacto {
-  background-color: var(--blanco-puro);
+  background-color: var(--crema-claro);
   border: var(--borde-grueso);
   padding: 40px;
   box-shadow: var(--sombra-plana-tarjeta);
@@ -571,8 +593,10 @@ a {
 }
 
 .grupo-formulario input:focus, .grupo-formulario select:focus, .grupo-formulario textarea:focus {
-  background-color: #FFFEEF;
-  border-color: var(--rosa-lola);
+  background-color: var(--verde-tropical);
+  border-color: var(--negro-profundo);
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0px var(--negro-profundo);
 }
 
 .boton-formulario {
@@ -583,7 +607,8 @@ a {
   11. FOOTER / PIE DE PÁGINA (OBLIGACIÓN: FLEXBOX)
    ========================================================================== */
 .pie-pagina {
-  background-color: var(--blanco-puro);
+  background-color: var(--crema-claro);
+  background-image: url("https://www.transparenttextures.com/patterns/old-wall.png");
   border-top: var(--borde-grueso);
   padding: 40px;
   display: flex;
@@ -617,9 +642,11 @@ a {
 }
 
 .red-social:hover {
-  background-color: var(--naranja-mango);
-  transform: translate(-1px, -1px);
-  box-shadow: 3px 3px 0px var(--negro-profundo);
+  background-color: var(--rosa-lola);
+  color: var(--blanco-puro);
+  transform: scale(1.2) rotate(-5deg);
+  box-shadow: 6px 6px 0px var(--negro-profundo);
+  cursor: pointer;
 }
 
 .lista-legales {
