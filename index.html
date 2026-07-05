@@ -5,119 +5,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Juank | SENA</title>
+    <meta name="descripcion" content="Portafolio de Juank - Proyectos HTML, CSS & JavaScript realizados durante el Tecnologo de ADSO." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body>
-    <header>
-        <div class="header-name">🗂️ Portafolio JUANK</div>
-        <h1 class="descripcion">HTML, CSS, JS | Aprendizaje SENA 🎮</h1>
-        <nav class="nav">
-            <a href="#proyectos">Proyectos</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
+
+    <header class="encabezado-portafolio">
+        <div class="contenedor navegador">
+            <div class="marca">
+                <span class="icono-marca">📁</span>
+                <span class="nombre-marca">Portafolio JUANK</span>
+            </div>
+            <p class="etiqueta-marca">HTML · CSS · JS <span class="sep">|</span> Formacion SENA</p>
+            <nav class="nav">
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
     </header>
 
-    <section class="bienvenida">
-        <div class="container">
-            <h2>Bienvenido al Portafolio de Juank</h2>
-            <p>A continuación puedes ver algunos de mis proyectos realizados en el curso de Programación Web 🚀</p>
-            <p>Presiona el botón para ver los proyectos</p>
+    <section class="hero">
+        <div class="contenedor hero-in">
+            <span class="insignia-hero">✨ Available for junior developer roles</span>
+            <h1 class="titulo-hero">Bienvenido al Portafolio de <span class="resaltar">Juank</span></h1>
+            <p class="subtitulo-hero">Aqui puedes ver algunos de mis proyectos desarrollados durante la formacion -- Una mezcla de codigo limpio, diseño original y mucha cafeina. 🚀</p>
+
+            <div class="acciones-hero">
+                <a href="#proyectos" class="btn btn-resaltar">Ver Proyectos ➡️</a>
+                <a href="#contacto" class="btn btn-fantasma">📩 Contactenos </a>
+            </div>
+
+            <div class="estadisticas">
+                <div  class="tarjeta-estadisticas">
+                    <div class="valor-estadisticas">6+</div>
+                    <div class="etiqueta-estadisticas">Proyectos lanzados</div>
+                </div>
+                <div class="tarjeta-estadisticas">
+                    <div class="valor-estadisticas">3</div>
+                    <div class="etiqueta-estadisticas">Lenguajes Principales</div>
+                </div>
+                <div class="tarjeta-estadisticas">
+                    <div class="valor-estadisticas">♾️</div>
+                    <div class="etiqueta-estadisticas">Tazas de cafe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proyectos" class="seccion-proyectos">
+        <div class="contenedor panel-proyectos">
+            <div class="titulo-seccion">
+                <span class="eyebrow"> &lt;/&gt; Trabajos seleccionados</span>
+                <h2>Proyectos</h2>
+                <p>Seis proyectos de front-end que abarcan diseños estaticos desarrollados dentro del ambiente de formacion</p>
+            </div>
+
+            <div id="cuadricula-proyectos" class="cuadricula-proyectos">
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">👨🏻‍💻</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Hoja de Vida</h3>
+                        <p class="subtitulo-proyecto">Diseño de un modelo de CV</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">🛍️</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Tarjeta Presentacion Producto</h3>
+                        <p class="subtitulo-proyecto">Presentacion de un articulo</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">🛍️</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Replica Pagina</h3>
+                        <p class="subtitulo-proyecto">Presentacion Producto</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">🛍️</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Factura #3</h3>
+                        <p class="subtitulo-proyecto">Replica de una factura comercial</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">🛍️</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Heladeria La Vaca Lola</h3>
+                        <p class="subtitulo-proyecto">Creacion de una webpage para una heladeria</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="tarjeta-proyecto">
+                    <div class="icono-proyecto">
+                        <span class="etiqueta-nivel nivel-principiante">Principiante</span>
+                        <div class="icono">🛍️</div>
+                        <p class="icono-titulo">Vista previa del producto</p>
+                        <p class="icono-subtitulo">[Espacio Captura de Pantalla]</p>
+                    </div>
+                    <div class="cuerpo-proyecto">
+                        <div class="etiqueta-proyecto">
+                            <span class="etiqueta">HTML</span>
+                            <span class="etiqueta">CSS</span>
+                        </div>
+                        <h3 class="titulo-proyecto">Tienda de accesorios</h3>
+                        <p class="subtitulo-proyecto">Replica de una pagina de una tienda de accesorios electronicos</p>
+                        <p class="descripcion-proyecto">Una tarjeta de producto adaptativa con estados al pasar el cursor, calificaciones y diseño limpio propio del comercio electronico</p>
+                        <div class="accion-tarjeta">
+                            <a href="#" class="btn btn-demo">↗️ Ver Demo</a>
+                            <a href="#" class="btn btn-codigo">📝 Ver Codigo</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="seccion-contacto">
+        <div class="tarjeta-contacto">
+            <h2>Vamos a crear algo.</h2>
+            <p>Estoy dispuesto a colaboraciones, pasantías y trabajos independientes de front-end.  Escríbeme!!!</p>
+            <div class="tomar-contacto">
+                <a href="mailto:juanco7732@gmail.com" class="btn btn-resaltar"> ✉️ juanco7732@gmail.com</a>
+                <a href="#" class="btn btn-contorno">Github</a>
+            </div>
+            <p class="ubicacion-contacto">📍 Ubicacdo en Colombia · Conectividad Remota</p>
         </div>
     </section>
     
-    <h2 class="titulo-proyectos">Proyectos</h2>
-
-    <section class="seccion-proyectos">
-        <div class="contenedor-proyectos">
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/Hoja_de_Vida.png" alt="Miniatura Hoja-de-Vida">
-                </div>
-
-                <h3>Hoja de Vida</h3>
-                <p>Mi Hoja de Vida</p>
-                <div class="botones">
-                    <a href="./hoja_de_vida/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/hoja_de_vida" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/Tarjeta_Producto.png" alt="Miniatura-Tarjeta">
-                </div>
-
-                <h3>Tarjeta Producto</h3>
-                <p>Tarjeta de Presentación</p>
-                <div class="botones">
-                    <a href="./TarjetaPresentacion/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/TarjetaPresentacion" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/Replica_Pagina.png" alt="Miniatura-Replica">
-                </div>
-
-                <h3>Replica Pagina</h3>
-                <p>Replica de una pagina web</p>
-                <div class="botones">
-                    <a href="./ReplicaPagina/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/ReplicaPagina" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/Factura_3.png" alt="Miniatura-Factura">
-                </div>
-
-                <h3>Factura</h3>
-                <p>Replica de Factura #3</p>
-                <div class="botones">
-                    <a href="./Factura/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/Factura" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/heladeria.png" alt="Miniatura-Heladeria">
-                </div>
-
-                <h3>Heladería La Vaca Lola</h3>
-                <p>Proyecto integrado de heladería con módulos web</p>
-                <div class="botones">
-                    <a href="./Heladeria-La-Vaca-Lola-/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/Heladeria-La-Vaca-Lola-" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
-            <div class="tarjeta-proyectos">
-                <div class="img-placeholder">
-                    <img src="Imagenes/tiendaAccesorios.png" alt="Miniatura-tiendaAccesorios">
-                </div>
-
-                <h3>Tienda de Accesorios</h3>
-                <p>Replica de la pagina de una tienda de Accesorios</p>
-                <div class="botones">
-                    <a href="./Tienda_Accesorios/index.html" target="_blank">Ver Proyecto</a>
-                    <a href="https://github.com/Juank211/Portafolio_JuanK/tree/main/Tienda_Accesorios" target="_blank">Ver Código</a>
-                </div>
-            </div>
-
+    <footer class="footer">
+        <div class="contenedor">
+            <p>&copy; <span id="year"></span> Portafolio Juank · Elaborado con HTML, CSS &amp; JavaScript.</p>
         </div>
-    </section>
+    </footer>
 
 </body>
-
-<footer class="footer">
-    <p>&copy; 2026 Portafolio Juank | Aprendizaje SENA 🚴🏻‍♂️</p>
-</footer>
-
 </html>
 
 
