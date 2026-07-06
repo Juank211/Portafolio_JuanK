@@ -383,15 +383,32 @@ a { color: inherit;
 .icono-proyecto {
     position: relative;
     aspect-ratio: 16 / 10;
-    background: linear-gradient(135deg, #eef1fa, #dfe4f4);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-bottom: 1px solid var(--color-border);
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.75rem;
-    text-align: center;
     padding: 1.5rem;
+    overflow: hidden;
+}
+
+.icono-proyecto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(10, 10, 15, 0.3);
+    z-index: 0;
+    transition: background 0.3ease;
+}
+
+.icono-proyecto > * {
+    position: relative;
+    z-index: 1;
 }
 
 .icono {
@@ -432,6 +449,7 @@ a { color: inherit;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    z-index: 2;
 }
 
 .nivel-principiante {
@@ -542,7 +560,7 @@ a { color: inherit;
     margin: 0 auto;
     padding: 3.5rem 2rem;
     border-radius: 2rem;
-    background: var(--color-primary);
+    background: var(--color-panel);
     color: #fff;
     text-align: center;
     box-shadow: var(--shadow-lift);
