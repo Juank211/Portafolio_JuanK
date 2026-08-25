@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Favoritos</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(1, 5, 38);
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #7f00ff;
+        }
+
+        .btn-volver {
+            display: block;
+            width: 200px;
+            background-color: #560591;
+            color: #9966cc;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            margin: 0 auto 30px auto;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tarjeta-usuario {
+            position: relative;
+            background: #560591;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tarjeta-usuario img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #9966cc;
+        }
+
+        .tarjeta-usuario h3 {
+            margin: 5px 0;
+            color: #9966cc;
+            font-size: 16px;
+        }
+
+        .tarjeta-usuario .nombre {
+            font-weight: bold;
+            font-size: 28px;
+            color: #9966cc;
+        }
+
+        .tarjeta-usuario .genero {
+            color: #9966cc;
+            text-transform: capitalize;
+        }
+
+        .tarjeta-usuario .edad {
+            color: #7f00ff;
+            font-weight: bold;
+        }
+
+        .mensaje-vacio {
+            color: #9966cc;
+            text-align: center;
+            font-size: 20px;
+            grid-column: 1 / -1;
+        }
+
+        .eliminar-fav {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #ff4b4b;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>💜 MIS USUARIOS FAVORITOS</h1>
+
+    <a href="index.html" class="btn-volver">↩ Volver a la Lista</a>
+
+    <div class="contenedor" id="grid"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let grid = document.getElementById("grid");
+
+            function renderizarFavoritos() {
+                let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
+                let favoritosIndexes = JSON.parse(localStorage.getItem("favoritos")) || [];
+
+                grid.innerHTML = "";
+
+                favoritosIndexes.forEach(favIndex => {
+                    let usuario = usuarios[favIndex];
+                    if (!usuario) return;
+
+                    let tarjeta = document.createElement("div");
+                    tarjeta.classList.add("tarjeta-usuario");
+
+                    tarjeta.innerHTML = `
+                    <button class="eliminar-fav" data-index="${favIndex}">❌</button>
+                    <img src="${usuario.picture.large}" alt="Avatar de ${usuario.name.first}">
+                    <h3 class="nombre">${usuario.name.first} ${usuario.name.last}</h3>
+                    <h3 class="genero">${usuario.gender}</h3>
+                    <h3 class="edad">${usuario.dob.age} años</h3>`;
+
+                    tarjeta.addEventListener("click", () => {
+                        localStorage.setItem("usuarioSeleccionado", JSON.stringify(usuario));
+                        window.location.href = "tarjeta.html";
+                    });
+
+                    grid.appendChild(tarjeta);
+                });
+
+                document.querySelectorAll(".eliminar-fav").forEach(boton => {
+                    boton.addEventListener("click", function (e) {
+                        e.stopPropagation();
+                        const favIndex = parseInt(this.dataset.index);
+
+                        let favoritosIndexes = JSON.parse(localStorage.getItem("favoritos")) || [];
+                        favoritosIndexes = favoritosIndexes.filter(id => id !== favIndex);
+
+                        localStorage.setItem("favoritos", JSON.stringify(favoritosIndexes));
+                        renderizarFavoritos();
+                    });
+                });
+            }
+
+            renderizarFavoritos();
+        });
+    </script>
+</body>
+
+</html>

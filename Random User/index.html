@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.18.1/axios.js"></script>
+    <title>Lista Usuarios</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(1, 5, 38);
+            font-family: 'Roboto', 'Arial', sans-serif;
+            padding: 20px;
+            color: #e0d5f5;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #7f00ff;
+            font-size: 2.2rem;
+            letter-spacing: 1px;
+        }
+
+        .contenedor {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 25px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tarjeta-usuario {
+            position: relative;
+            background: #560591;
+            border: 5px solid rgba(153, 102, 204, 0.3);
+            border-radius: 12px;
+            padding: 25px 20px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .tarjeta-usuario img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #9966cc;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .tarjeta-usuario h3 {
+            margin: 6px 0;
+            color: #d1c4e9;
+            font-size: 15px;
+        }
+
+        .tarjeta-usuario .nombre {
+            font-weight: bold;
+            font-size: 22px;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+        .tarjeta-usuario .genero {
+            color: #b388ff;
+            text-transform: capitalize;
+        }
+
+        .tarjeta-usuario .edad {
+            color: #e040fb;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .verFavoritos {
+            color: #ffffff;
+            font-size: 20px;
+            background-color: #560591;
+            border: 5px solid #9966cc;
+            width: 280px;
+            border-radius: 8px;
+            padding: 12px;
+            text-align: center;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 0 auto 35px auto;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .verFavoritos:hover {
+            background-color: #7f00ff;
+        }
+
+        .favoritos {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 28px;
+            background: none;
+            border: none;
+            color: #9966cc;
+            cursor: pointer;
+            line-height: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>100 USUARIOS GRID</h1>
+
+
+    <a href="favoritos.html" class="verFavoritos">
+        💜 Favoritos: <span id="contador">0</span>
+    </a>
+
+    <div class="contenedor" id="grid"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            try {
+
+
+                let res = await axios.get("https://randomuser.me/api/?results=100");
+                let grid = document.getElementById("grid")
+                let usuarios = res.data.results;
+
+                localStorage.setItem("usuarios", JSON.stringify(usuarios));
+
+                let favoritos = JSON.parse(localStorage.getItem("favoritos")) || [];
+                document.getElementById(`contador`).textContent = favoritos.length;
+
+                grid.innerHTML = "";
+
+                usuarios.forEach((usuario, index) => {
+                    let tarjeta = document.createElement("div");
+                    tarjeta.classList.add("tarjeta-usuario");
+
+                    let esFavorito = favoritos.includes(index);
+
+                    tarjeta.innerHTML = `
+                    <img src="${usuario.picture.large}" alt="Avatar de ${usuario.name.first}" >
+                    <h3 class="nombre">${usuario.name.first} ${usuario.name.last} </h3>
+                    <h3 class="genero">${usuario.gender}</h3>
+                    <h3 class="edad">${usuario.dob.age} años</h3>
+                    <button class="favoritos" data-index="${index}" > ♡ </button>`;
+
+                    tarjeta.addEventListener("click", () => {
+                        localStorage.setItem("usuarioSeleccionado", JSON.stringify(usuario));
+                        window.location.href = "tarjeta.html";
+                    });
+
+                    grid.appendChild(tarjeta)
+
+                });
+
+                document.querySelectorAll(".favoritos").forEach(boton => {
+                    boton.addEventListener("click", function (e) {
+                        e.stopPropagation();
+
+                        const index = parseInt(this.dataset.index)
+                        if (this.classList.contains('activo')) {
+                            this.classList.remove('activo');
+                            this.textContent = '♡';
+                            favoritos = favoritos.filter(id => id !== index);
+                        } else {
+                            this.classList.add('activo');
+                            this.textContent = '💜';
+                            if (!favoritos.includes(index)) {
+                                favoritos.push(index);
+                            }
+                        }
+
+                        document.getElementById('contador').textContent = favoritos.length;
+                        localStorage.setItem("favoritos", JSON.stringify(favoritos));
+                    });
+                });
+            } catch (error) {
+                console.log("Error al cargar usuarios:", error);
+            }
+        });
+    </script>
+</body>
+
+</html>
